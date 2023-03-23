@@ -1,10 +1,11 @@
 import React from 'react'
 
-function ItemListContainer ({ greeting }) {
+function ItemListContainer ({ ...props }) {
   return (
     <div
-      className='h-screen w-full grid place-items-center'
-    >{greeting}
+      className='flex flex-col items-center w-full h-screen'
+    >
+      {props.children}
     </div>
   )
 }

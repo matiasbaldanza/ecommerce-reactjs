@@ -24,25 +24,31 @@ const cart = {
 function NavBar () {
   const topMenu = [
     {
-      title: 'Celulares',
-      route: '/celulares'
+      title: 'Notebooks',
+      route: '/notebooks'
+    },
+    {
+      title: 'Notebooks Gamer',
+      route: '/gamer'
     },
     {
       title: 'Accesorios',
       route: '/accesorios'
-    },
-    {
-      title: 'Computadoras',
-      route: '/computadoras'
     }
   ]
 
   return (
-    <div className='navbar bg-base-100'>
+    <div className='mb-10 navbar bg-base-100'>
 
       {/* Logo */}
       <div className='flex-none'>
-        <a className='text-xl normal-case btn btn-ghost'>eCommerce</a>
+        <a className='text-xl normal-case btn btn-ghost'>
+          tuPortátil
+          <span
+            className='block mx-1 text-xs text-center'
+          >TECHSTORE
+          </span>
+        </a>
       </div>
 
       {/* Menu */}
