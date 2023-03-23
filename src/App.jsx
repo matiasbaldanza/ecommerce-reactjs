@@ -14,9 +14,8 @@ function App () {
       <NavBar />
       <ItemListContainer>
         <Greeting />
-        <ItemCount initial={1} stock={10} onAdd={(count) => console.log('Cantidad agregada ', count)} />
       </ItemListContainer>
-
+      {/* <ItemCount initial={1} stock={10} onAdd={(count) => console.log('Cantidad agregada ', count)} /> */}
     </div>
   )
 }
