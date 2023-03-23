@@ -2,6 +2,25 @@ import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
 
+const cart = {
+  cantItems: 2,
+  items: [
+    {
+      id: 1,
+      title: 'Celular 1',
+      price: 429,
+      quantity: 1
+    },
+    {
+      id: 2,
+      title: 'Celular 2',
+      price: 570,
+      quantity: 1
+    }
+  ],
+  subTotal: 999
+}
+
 function NavBar () {
   const topMenu = [
     {
@@ -23,14 +42,14 @@ function NavBar () {
 
       {/* Logo */}
       <div className='flex-none'>
-        <a className='btn btn-ghost normal-case text-xl'>eCommerce</a>
+        <a className='text-xl normal-case btn btn-ghost'>eCommerce</a>
       </div>
 
       {/* Menu */}
-      <div className='flex-1 justify-between'>
+      <div className='justify-between flex-1'>
         <div />
         <CategoriesMenu menuItems={topMenu} />
-        <CartWidget />
+        <CartWidget cart={cart} />
       </div>
     </div>
   )
