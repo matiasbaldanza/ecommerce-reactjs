@@ -31,22 +31,6 @@ function ItemDetail ({ ...props }) {
 
         <ProductImage id={id} src={images[0]} alt={name} className='basis-3/5' />
         {/* TODO: Carousel */}
-        {/* <div
-          className='w-1/2 carousel'
-        >
-          {images.map((image, index) => (
-            <figure
-              key={index}
-              id={`slide${index}`} className='relative w-full carousel-item'
-            >
-              <img src={image} className='w-full rounded-xl' />
-              <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-                <a href={`slide${index - 1}`} className='btn btn-circle'>❮</a>
-                <a href={`slide${index + 1}`} className='btn btn-circle'>❯</a>
-              </div>
-            </figure>
-          ))}
-        </div> */}
       </header>
       <main className='flex flex-col items-center gap-10 card bg-base-100'>
         {
