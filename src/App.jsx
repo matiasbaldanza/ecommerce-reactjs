@@ -14,7 +14,7 @@ function App () {
   return (
     <div>
       <AnnouncementBar className='relative'>
-        <p>⚠️ En construcción! ⚠️</p>
+        <p>⚠️ En Construcción! ⚠️</p>
 
       </AnnouncementBar>
       <div className='container m-auto max-w-7xl'>
