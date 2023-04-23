@@ -302,54 +302,51 @@ const products = [
     price: 284_890,
     priceCurrency: 'ARS',
     images: [
-      '3-01-600x600.jpg',
-      '3-02-600x600.jpg',
-      '3-03-600x600.jpg',
-      '3-04-600x600.jpg',
-      '3-05-600x600.jpg',
-      '3-06-600x600.jpg',
-      '3-07-600x600.jpg'
+      '01-600x600.jpg',
+      '02-600x600.jpg',
+      '03-600x600.jpg',
+      '04-600x600.jpg',
+      '05-600x600.jpg',
+      '06-600x600.jpg',
+      '07-600x600.jpg'
     ],
-    banner: '3-banner-idepad-gaming-3-ryzen.jpg',
-    description: 'La Lenovo IdeaPad Gaming 3 mejora tu juego y nivela el campo de juego. Diseñado con la última generación de procesadores AMD Ryzen 5 y gráficos NVIDIA® GeForce® RTX, memoria DDR4 y opciones de almacenamiento PCIe SSD, este portátil para juegos proyecta una confianza silenciosa y serena con visuales suaves y cristalinas y un juego sin interrupciones. La IdeaPad Gaming 3 también se mantiene fresca, con un sistema térmico de alto rendimiento rediseñado que te permite jugar sin preocupaciones. Disfruta de la nítida pantalla FHD de 1080p para jugar sin problemas, y de la rapidísima GPU NVIDIA® GeForce RTX™ 3050 Ti para potenciar los juegos más populares de hoy, incluidos los títulos modernos.',
+    banner: 'banner-vivobook.jpg',
+    description: '',
     features: {
       cpu: {
         title: 'Procesador',
-        text: `AMD Ryzen 5 5600H
-            Velocidad: 3,30 GHz – 4,20 GHz
-            Nucleos: 6
-            Subprocesos: 12`
+        text: `Intel® Core i5 11300H
+        Velocidad: 3,10 GHz – 4,40 GHz
+        Nucleos: 4
+        Subprocesos: 8`
       },
       ram: {
         title: 'Memoria',
         text: `Capacidad: 8GB
-            Tipo: DDR4
-            Expandible: 64GB`
+        Tipo: DDR4`
       },
       screen: {
         title: 'Pantalla',
-        text: `Pulgadas: 15.6"
-            Resolución: FULL HD
-            Tecnología: IPS
-            Hz: 120`
+        text: `Pulgadas: 14″
+        Resolución: WQXGA+ 2880×1800
+        Tecnología: OLED 100% DCI-P3
+        Hz: 90`
       },
       gpu: {
         title: 'Gráficos',
-        text: `NVIDIA GeForce RTX 3050 Ti
-            Memoria de Video: 4GB GDDR6`
+        text: 'Intel Iris Xe Graphics'
       },
       storage: {
         title: 'Almacenamiento',
         text: `Capacidad: 256 GB
-            Tipo: SSD
-            Tecnología: PCIe 3.0 NVMe
-            Slot M.2 Adicional`
+        Tipo: SSD
+        Tecnología: PCIe 3.0 nVme`
       },
       connectivity: {
         title: 'Conectividad',
-        text: `WiFi 6 ( 802.11 ax)
-            Bluetooth®
-            Ethernet: Si`
+        text: `WiFi 6 802.11ax
+        Bluetooth 5.0
+        Ethernet: No`
       },
       os: {
         title: 'Sistema Operativo',
@@ -358,34 +355,225 @@ const products = [
       },
       ports: {
         title: 'Puertos',
-        text: `USB-C® 3.2 Gen 1
-            2x USB 3.2 Gen 1
-            HDMI 2.0
-            RJ-45
-            Headphone / microphone`
+        text: `2x USB 2.0 Type-A
+        USB 3.2 Gen 1 Type-A
+        Thunderbolt™ 4 DP/PD
+        HDMI
+        3.5mm Combo Audio Jack`
       },
       other: {
         title: 'Otras características',
-        text: `Teclado Retroiluminado
-            Webcam 720p
-            Pad Numérico
-            Nahimic Audio`
+        text: `Webcam 720p
+        Lector de Tarjetas
+        Teclado Retroiluminado`
+      },
+      model: {
+        title: 'Modelo',
+        text: `Marca: Asus
+        Linea: VivoBook 14 PRO
+        Modelo: K3400PA-WH55`
+      },
+      dimensions: {
+        title: 'Dimensiones y peso',
+        text: `31.8 x 22.9 x 1.9 cm
+        Peso: 1,40 kg
+        Chasis: Aluminio y plástico`
+      },
+      usage: {
+        title: 'Uso recomendado',
+        text: 'Ofimática, Multimedia, Internet, Diseño, Programación, Fotografía'
+      }
+    }
+  },
+  {
+    // source: https://tunotebook.com.ar/notebooks/asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450/
+    id: 'asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450',
+    name: 'Asus ZenBook Flip 2en1 15.6″ Ryzen 7 5700U 8GB 256GB GeForce MX450',
+    category: 'notebooks',
+    brand: 'Asus',
+    stock: 9,
+    price: 389_890,
+    priceCurrency: 'ARS',
+    images: [
+      '01.jpg',
+      '02.jpg',
+      '03.jpg',
+      '04.jpg',
+      '05.jpg',
+      '06.jpg',
+      '07.webp',
+      '08.jpg'
+    ],
+    banner: 'banner-zenbook-flip.jpg',
+    description: 'Da rienda suelta a tu creatividad. La serie ASUS Zenbook te da las herramientas para ser más creativo. Zenbook te permite maximizar tu potencial creativo con una combinación única de rendimiento, velocidad, elegancia y precisión. Un versátil e innovador convertible 2 en 1 con una pantalla de 360 grados que permite utilizarlo como un portátil fino y ligero, una práctica tableta o en cualquier posición intermedia.',
+    features: {
+      cpu: {
+        title: 'Procesador',
+        text: `AMD® Ryzen 7 5700U
+        Velocidad: 1,80 GHz – 4,30 GHz
+        Nucleos: 8
+        Subprocesos: 16`
+      },
+      ram: {
+        title: 'Memoria',
+        text: `Capacidad: 8GB
+        Tipo: LPDDR4X`
+      },
+      screen: {
+        title: 'Pantalla',
+        text: `Pulgadas: 15.6″
+        Resolución: Full HD
+        Tecnología: IPS Táctil
+        Hz: 60`
+      },
+      gpu: {
+        title: 'Gráficos',
+        text: `NVIDIA® GeForce® MX450
+        Memoria: 2GB GDDR6`
+      },
+      storage: {
+        title: 'Almacenamiento',
+        text: `Capacidad: 256 Gb
+        Tipo: SSD
+        Tecnología: PCIe 3.0 nVme`
+      },
+      connectivity: {
+        title: 'Conectividad',
+        text: `Dual-band Wi-Fi 5 (802.11ac)
+        Bluetooth™ 5
+        Ethernet: No`
+      },
+      os: {
+        title: 'Sistema Operativo',
+        text: `Windows 11
+            Versión: Home 64 Bits`
+      },
+      ports: {
+        title: 'Puertos',
+        text: `USB-A 2.0
+        USB-A 3.2 Gen 1
+        USB-C 3.2 Gen 1
+        HDMI 1
+        Conector de Áudio Combo 3,5 mm`
+      },
+      other: {
+        title: 'Otras características',
+        text: `Sistema 2en1 
+        (tablet + notebook)
+        Webcam 720p
+        Teclado Retroiluminado
+        Lector de Tarjetas`
+      },
+      model: {
+        title: 'Modelo',
+        text: `Marca: Asus
+        Linea: ZenBook Flip 15
+        Modelo: Q508UG-212.R7TBL`
+      },
+      dimensions: {
+        title: 'Dimensiones y peso',
+        text: `35.78 x 23.0 x 1.99 cm
+        Peso: 1,99 kg
+        Chasis: Aluminio/Plástico`
+      },
+      usage: {
+        title: 'Uso recomendado',
+        text: 'Programación, edición de fotos, diseño, arquitectura, CAD, Multimedia'
+      }
+    }
+  },
+  {
+    // source: https://tunotebook.com.ar/notebooks/lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd/
+    id: 'lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd',
+    name: 'Lenovo IdeaPad 3 14″ Ryzen 5 8GB 256 GB SSD',
+    category: 'notebooks',
+    brand: 'Asus',
+    stock: 9,
+    price: 279,
+    priceCurrency: 'ARS',
+    images: [
+      '01.jpg',
+      '02.jpg',
+      '03.jpg',
+      '04.jpg',
+      '05.jpg',
+      '06.jpg',
+      '07.jpg',
+      '08.jpg'
+    ],
+    banner: '',
+    description: '',
+    features: {
+      cpu: {
+        title: 'Procesador',
+        text: `AMD® Ryzen 5 5500U
+        Velocidad: 2,10 GHz – 4,0 GHz
+        Nucleos: 6
+        Subprocesos: 12`
+      },
+      ram: {
+        title: 'Memoria',
+        text: `Capacidad: 8GB
+        Tipo: DDR4
+        Expandible: 12GB / 20GB`
+      },
+      screen: {
+        title: 'Pantalla',
+        text: `Pulgadas: 14″
+        Resolución: FULL HD
+        Tecnología: IPS
+        Hz: 60`
+      },
+      gpu: {
+        title: 'Gráficos',
+        text: 'AMD Radeon RX Vega 7'
+      },
+      storage: {
+        title: 'Almacenamiento',
+        text: `Capacidad: 256 GB
+        Tipo: SSD
+        Tecnología: PCIe NVMe`
+      },
+      connectivity: {
+        title: 'Conectividad',
+        text: `WiFi: 2×2 802.11AC
+        Bluetooth®
+        Ethernet: No`
+      },
+      os: {
+        title: 'Sistema Operativo',
+        text: `Windows 11
+            Versión: Home 64 Bits`
+      },
+      ports: {
+        title: 'Puertos',
+        text: `USB 2.0
+        USB 3.2
+        USB-C 3.2
+        HDMI
+        Headphone/Mic Jack`
+      },
+      other: {
+        title: 'Otras características',
+        text: `Webcam 720p
+        Teclado Retroiluminado
+        Lector tarjetas SD`
       },
       model: {
         title: 'Modelo',
         text: `Marca: Lenovo
-            Linea: IdeaPad Gaming 3
-            Modelo: 82K201XCUS`
+        Linea: IdeaPad 3
+        Modelo: 82KT00GVUS`
       },
       dimensions: {
         title: 'Dimensiones y peso',
-        text: `35,96 x 25,19 x 2,41 cm
-            Peso: 2,25 kg
-            Chasis: Plástico`
+        text: `32,4 x 21,5 x 1,9 cm
+        Peso: 1,45 kg
+        Chasis: Plástico`
       },
       usage: {
         title: 'Uso recomendado',
-        text: 'Ofimática, Multimedia, Internet, Gaming, Diseño, Programación'
+        text: 'Ofimática, Multimedia, Internet, edición básica'
       }
     }
   }

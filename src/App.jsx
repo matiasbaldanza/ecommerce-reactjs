@@ -30,7 +30,10 @@ function App () {
       {/* TEST ItemDetailContainer */}
       {/* <ItemDetailContainer productId='alienware-m15-r7-240hz-core-i7-12700h-16gb-512gb-rtx-3070ti' /> */}
       {/* <ItemDetailContainer productId='msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb' /> */}
-      <ItemDetailContainer productId='lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti' />
+      {/* <ItemDetailContainer productId='lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti' /> */}
+      {/* <ItemDetailContainer productId='asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb' /> */}
+      {/* <ItemDetailContainer productId='asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450' /> */}
+      <ItemDetailContainer productId='lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd' />
 
     </div>
   )
