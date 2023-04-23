@@ -1,6 +1,9 @@
 import ItemCount from '../ItemCount/ItemCount'
-import Price from '../Price/Price'
 import Balancer from 'react-wrap-balancer'
+
+// Components
+import Price from '../Price/Price'
+import ProductTags from '../ProductTags/ProductTags'
 
 function ItemDetail ({ ...props }) {
   const {
@@ -12,26 +15,15 @@ function ItemDetail ({ ...props }) {
   return (
     <article className='container flex flex-col gap-6'>
       <header
-        className='flex flex-row-reverse justify-between w-full gap-6'
+        className='flex flex-row-reverse justify-between gap-6'
       >
         {/* Product Info */}
         <div
           className='flex flex-col gap-4 text-xl basis-2/5 '
         >
-          {/* Tags */}
-          <div className='flex flex-row gap-4'>
-            {[brand, category].map((tag) => {
-              return (
-                <div
-                  key={tag}
-                  className='gap-2 p-4 badge badge-xl badge-outline badge-accent'
-                >
-                  <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' className='inline-block w-4 h-4 stroke-current'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12' /></svg>
-                  {tag}
-                </div>
-              )
-            })}
-          </div>
+          <ProductTags {...{ brand, category }} />
+
+          {/* title and details */}
           <h1
             className='text-3xl font-bold card-title'
           >{name}
@@ -52,26 +44,28 @@ function ItemDetail ({ ...props }) {
         </div>
 
         <figure>
-          <img src={images[0]} />
+          <img
+            className='w-full rounded-xl'
+            src={images[0]}
+          />
         </figure>
         {/* TODO: Carousel */}
-        {/*         <div
+        {/* <div
           className='w-1/2 carousel'
         >
           {images.map((image, index) => (
-            <div
+            <figure
               key={index}
               id={`slide${index}`} className='relative w-full carousel-item'
             >
-              <img src={image} className='w-full' />
+              <img src={image} className='w-full rounded-xl' />
               <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
                 <a href={`slide${index - 1}`} className='btn btn-circle'>❮</a>
                 <a href={`slide${index + 1}`} className='btn btn-circle'>❯</a>
               </div>
-            </div>
+            </figure>
           ))}
         </div> */}
-        <figure />
       </header>
       <main
         className='flex flex-col items-center gap-6 p-6 card bg-base-100'
