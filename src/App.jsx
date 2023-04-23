@@ -1,21 +1,24 @@
-import { useState } from 'react'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Components
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Greeting from './components/Greeting/Greeting'
 
-import ItemCount from './components/ItemCount/ItemCount'
+// Temp
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App () {
   return (
     <div className='container m-auto max-w-7xl'>
       <NavBar />
-      <ItemListContainer>
+      <ItemDetailContainer
+        productId={1}
+      />
+      {/* <ItemListContainer>
         <Greeting />
-      </ItemListContainer>
-      {/* <ItemCount initial={1} stock={10} onAdd={(count) => console.log('Cantidad agregada ', count)} /> */}
+      </ItemListContainer> */}
     </div>
   )
 }
