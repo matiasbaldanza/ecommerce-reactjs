@@ -1,5 +1,5 @@
 import React from 'react'
-import CartBadge from '../CartBadge/CartBadge'
+import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
 
 function NavBar () {
@@ -30,7 +30,7 @@ function NavBar () {
       <div className='flex-1 justify-between'>
         <div />
         <CategoriesMenu menuItems={topMenu} />
-        <CartBadge />
+        <CartWidget />
       </div>
     </div>
   )
