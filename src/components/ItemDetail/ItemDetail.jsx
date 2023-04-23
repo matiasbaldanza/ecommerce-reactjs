@@ -2,8 +2,8 @@ import ItemCount from '../ItemCount/ItemCount'
 import Balancer from 'react-wrap-balancer'
 
 // Components
-import Price from '../Price/Price'
 import ProductTags from '../ProductTags/ProductTags'
+import ProductInfo from '../ProductInfo/ProductInfo'
 
 function ItemDetail ({ ...props }) {
   const {
@@ -14,35 +14,12 @@ function ItemDetail ({ ...props }) {
 
   return (
     <article className='container flex flex-col gap-6'>
-      <header
-        className='flex flex-row-reverse justify-between gap-6'
-      >
-        {/* Product Info */}
-        <div
-          className='flex flex-col gap-4 text-xl basis-2/5 '
-        >
+      <header className='flex flex-row-reverse justify-between gap-6'>
+        <div className='flex flex-col gap-4 text-xl basis-2/5 '>
           <ProductTags {...{ brand, category }} />
-
-          {/* title and details */}
-          <h1
-            className='text-3xl font-bold card-title'
-          >{name}
-          </h1>
-          <div>
-            Precio exclusivo:
-            <div className='ml-2 tooltip tooltip-right' data-tip='Transferencia, depósito o efectivo'>
-              <button className='badge badge-sm align-super text-bold'>i</button>
-            </div>
-            <Price
-              className='text-xl text-info ' price={price} currency={priceCurrency}
-            />
-          </div>
-          <p>Stock disponible: {stock}</p>
-          <div className='gap-2 p-4 badge badge-xl badge-success'>
-            Envío gratuito a domicilio
-          </div>
+          <ProductInfo {...{ name, price, priceCurrency, stock }} />
         </div>
-
+      
         <figure>
           <img
             className='w-full rounded-xl'
