@@ -5,6 +5,7 @@ import Balancer from 'react-wrap-balancer'
 import ProductTags from '../ProductTags/ProductTags'
 import ProductInfo from '../ProductInfo/ProductInfo'
 import ProductImage from '../ProductImage/ProductImage'
+import ProductDescription from '../ProductDescription/ProductDescription'
 
 function ItemDetail ({ ...props }) {
   const {
@@ -40,24 +41,10 @@ function ItemDetail ({ ...props }) {
           ))}
         </div> */}
       </header>
-      <main
-        className='flex flex-col items-center gap-6 p-6 card bg-base-100'
-      >
-        <figure>
-          <img src={banner} alt={`Banner del producto ${name}`} />
-        </figure>
-        <section className='flex flex-col items-center gap-4 p-6'>
-          <h2
-            className='text-2xl card-title'
-          >{name}
-          </h2>
-          <p
-            className='text-lg'
-          >
-            {description}
-          </p>
-        </section>
-        <section className='flex flex-col items-center gap-4 p-6'>
+      <main className='flex flex-col items-center gap-10 card bg-base-100'>
+        <ProductImage image={banner} alt={`Banner del producto ${name}`} />
+        <ProductDescription {...{ name, description }} />
+        <section className='flex flex-col items-center gap-4'>
           <h2 className='text-2xl card-title'>
             Especificaciones
           </h2>
