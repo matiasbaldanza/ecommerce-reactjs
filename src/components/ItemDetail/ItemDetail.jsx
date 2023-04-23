@@ -46,7 +46,10 @@ function ItemDetail ({ ...props }) {
         </div> */}
       </header>
       <main className='flex flex-col items-center gap-10 card bg-base-100'>
-        <ProductImage id={id} src={banner} alt={`Banner del producto ${name}`} />
+        {
+          banner && banner.length > 0 &&
+            <ProductImage id={id} src={banner} alt={`Banner del producto ${name}`} />
+        }
         <ProductDescription {...{ name, description }} />
         <ProductSpecs features={features} />
       </main>
