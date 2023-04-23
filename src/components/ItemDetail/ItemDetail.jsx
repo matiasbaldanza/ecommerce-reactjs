@@ -4,6 +4,7 @@ import Balancer from 'react-wrap-balancer'
 // Components
 import ProductTags from '../ProductTags/ProductTags'
 import ProductInfo from '../ProductInfo/ProductInfo'
+import ProductImage from '../ProductImage/ProductImage'
 
 function ItemDetail ({ ...props }) {
   const {
@@ -19,13 +20,8 @@ function ItemDetail ({ ...props }) {
           <ProductTags {...{ brand, category }} />
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
         </div>
-      
-        <figure>
-          <img
-            className='w-full rounded-xl'
-            src={images[0]}
-          />
-        </figure>
+
+        <ProductImage image={images[0]} alt={name} />
         {/* TODO: Carousel */}
         {/* <div
           className='w-1/2 carousel'
