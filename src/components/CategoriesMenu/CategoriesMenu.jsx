@@ -1,4 +1,4 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function CategoriesMenu ({ menuItems }) {
   return (
@@ -8,7 +8,7 @@ function CategoriesMenu ({ menuItems }) {
           return (
             <li
               key={`topMenu-${menuItem.title}`}
-            ><a href={menuItem.route}>{menuItem.title}</a>
+            ><NavLink to={`/category/${menuItem.route}`}>{menuItem.title}</NavLink>
             </li>
           )
         })

@@ -1,18 +1,30 @@
 import { useState, useEffect } from 'react'
 import { getProducts, getProductsByCategory } from '../../mocks/asyncMock'
+import { useParams } from 'react-router-dom'
+
+// Componentes
 import ItemList from '../ItemList/ItemList'
 
 function ItemListContainer ({ ...props }) {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+
   // const { categoryId } = useParams()
   const { categoryId } = getProducts // TEMP
 
   useEffect(() => {
+    setLoading(true)
     const asyncFunc = categoryId ? getProductsByCategory : getProducts
 
     asyncFunc(categoryId)
-      .then((response) => { setProducts(response) })
-      .catch((error) => { console.log(error) })
+      .then((response) => {
+        setProducts(response)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log(error)
+        setLoading(false)
+      })
   }, [categoryId])
 
   return (
@@ -20,7 +32,11 @@ function ItemListContainer ({ ...props }) {
       className='flex flex-col items-center w-full gap-4'
     >
       {props.children}
-      {products.id ? <ItemList products={products} /> : <p>Cargando...</p>}
+      {
+        loading
+          ? <p>Cargando...</p>
+          : <ItemList products={products} />
+      }
     </div>
   )
 }

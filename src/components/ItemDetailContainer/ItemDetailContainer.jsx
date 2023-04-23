@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react'
 import { getProductById } from '../../mocks/asyncMock'
+import { useParams } from 'react-router-dom'
+
+// Componentes
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-function ItemDetailContainer ({ productId }) {
+function ItemDetailContainer ({ productId }) { // TEMP: remove prop productId, which will be passed by router
   const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(true)
+
+  // const { productId } = useParams()
 
   useEffect(() => {
     setLoading(true)
@@ -18,7 +23,7 @@ function ItemDetailContainer ({ productId }) {
         console.log(error)
         setLoading(false)
       })
-  }, [])
+  }, [productId])
 
   return (
     <div

@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Componentes
 import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
 
@@ -25,15 +28,15 @@ function NavBar () {
   const topMenu = [
     {
       title: 'Notebooks',
-      route: '/notebooks'
+      route: 'notebooks'
     },
     {
       title: 'Notebooks Gamer',
-      route: '/gamer'
+      route: 'gamer'
     },
     {
       title: 'Accesorios',
-      route: '/accesorios'
+      route: 'accesorios'
     }
   ]
 
@@ -42,13 +45,16 @@ function NavBar () {
 
       {/* Logo */}
       <div className='flex-none'>
-        <a className='text-xl normal-case btn btn-ghost'>
+        <Link
+          className='text-xl normal-case btn btn-ghost'
+          to='/'
+        >
           tuPortátil
           <span
             className='block mx-1 text-xs text-center'
           >TECHSTORE
           </span>
-        </a>
+        </Link>
       </div>
 
       {/* Menu */}

@@ -1,7 +1,7 @@
 const products = [
   {
     // source: https://tunotebook.com.ar/gamer/alienware-m15-r7-240hz-core-i7-12700h-32gb-512gb-rtx-3070ti/
-    id: 1,
+    id: 'alienware-m15-r7-240hz-core-i7-12700h-16gb-512gb-rtx-3070ti',
     name: 'Alienware M15 R7 15.6″ 240hz Core i7 12700H 16GB 512GB RTX 3070Ti',
     category: 'gamer',
     brand: 'Alienware',
@@ -9,17 +9,17 @@ const products = [
     price: 1_275_890,
     priceCurrency: 'ARS',
     images: [
-      'public/product-images/1-01-600x600.jpg',
-      'public/product-images/1-02-600x600.jpg',
-      'public/product-images/1-03-600x600.jpg',
-      'public/product-images/1-04-600x600.jpg',
-      'public/product-images/1-05-600x600.jpg',
-      'public/product-images/1-06-600x600.jpg',
-      'public/product-images/1-07-600x600.jpg',
-      'public/product-images/1-08-600x600.jpg',
-      'public/product-images/1-09-600x600.jpg'
+      '01-600x600.jpg',
+      '02-600x600.jpg',
+      '03-600x600.jpg',
+      '04-600x600.jpg',
+      '05-600x600.jpg',
+      '06-600x600.jpg',
+      '07-600x600.jpg',
+      '08-600x600.jpg',
+      '09-600x600.jpg'
     ],
-    banner: 'public/product-images/1-banner-alienware-m15-r7.jpg',
+    banner: 'banner-alienware-m15-r7.jpg',
     description: 'Obtén la ventaja que necesitas con la tecnología de refrigeración Alienware Cryo-tech™, que incorpora ventiladores con una nueva configuración y más del doble de aspas en un diseño un 37,5 % más fino que el de la generación anterior. El diseño con doble ventilador, que da prioridad al rendimiento, absorbe aire frío por las rejillas superior e inferior y expulsa el aire caliente por los lados izquierdo y derecho y la parte trasera. De este modo, se garantiza una experiencia de juego excepcional.',
     features: {
       cpu: {
@@ -100,7 +100,7 @@ const products = [
   },
   {
     // source: https://tunotebook.com.ar/gamer/msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb/
-    id: 2,
+    id: 'msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb',
     name: 'MSI Pulse GL76 17.3″ 144hz i7 12th Gen 16GB 512GB RTX 3070 8GB',
     category: 'gamer',
     brand: 'Alienware',
@@ -108,15 +108,15 @@ const products = [
     price: 989_890,
     priceCurrency: 'ARS',
     images: [
-      'public/product-images/2-01-600x600.jpg',
-      'public/product-images/2-02-600x600.jpg',
-      'public/product-images/2-03-600x600.jpg',
-      'public/product-images/2-04-600x600.jpg',
-      'public/product-images/2-05-600x600.jpg',
-      'public/product-images/2-06-600x600.jpg',
-      'public/product-images/2-07-600x600.jpg'
+      '01-600x600.jpg',
+      '02-600x600.jpg',
+      '03-600x600.jpg',
+      '04-600x600.jpg',
+      '05-600x600.jpg',
+      '06-600x600.jpg',
+      '07-600x600.jpg'
     ],
-    banner: 'public/product-images/2-banner-pulse-GL76.jpg',
+    banner: 'banner-pulse-GL76.jpg',
     description: 'El más adaptable al cambio es el que sobrevive y evoluciona. Elige el espíritu del dragón y evoluciona con los últimos portátiles GL76 Gaming de MSI equipados con procesadores Intel® Core ™ i7 de 12va generación y las últimas tarjetas gráficas GeForce RTX diseñadas para jugadores con estilo. Su pantalla IPS de 144HZ con velocidad y claridad sin precedentes te ofrece las imágenes más vibrantes para que nunca pierdas el ritmo.',
     features: {
       cpu: {
@@ -197,7 +197,7 @@ const products = [
   },
   {
     // source: https://tunotebook.com.ar/gamer/lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti/
-    id: 3,
+    id: 'lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti',
     name: 'Lenovo IdeaPad Gaming 3 15.6″ 120hz Ryzen 5 8GB 256GB RTX 3050Ti',
     category: 'gamer',
     brand: 'Lenovo',
@@ -205,15 +205,112 @@ const products = [
     price: 449_890,
     priceCurrency: 'ARS',
     images: [
-      'public/product-images/3-01-600x600.jpg',
-      'public/product-images/3-02-600x600.jpg',
-      'public/product-images/3-03-600x600.jpg',
-      'public/product-images/3-04-600x600.jpg',
-      'public/product-images/3-05-600x600.jpg',
-      'public/product-images/3-06-600x600.jpg',
-      'public/product-images/3-07-600x600.jpg'
+      '01-600x600.jpg',
+      '02-600x600.jpg',
+      '03-600x600.jpg',
+      '04-600x600.jpg',
+      '05-600x600.jpg',
+      '06-600x600.jpg',
+      '07-600x600.jpg'
     ],
-    banner: 'public/product-images/3-banner-idepad-gaming-3-ryzen.jpg',
+    banner: 'banner-idepad-gaming-3-ryzen.jpg',
+    description: 'La Lenovo IdeaPad Gaming 3 mejora tu juego y nivela el campo de juego. Diseñado con la última generación de procesadores AMD Ryzen 5 y gráficos NVIDIA® GeForce® RTX, memoria DDR4 y opciones de almacenamiento PCIe SSD, este portátil para juegos proyecta una confianza silenciosa y serena con visuales suaves y cristalinas y un juego sin interrupciones. La IdeaPad Gaming 3 también se mantiene fresca, con un sistema térmico de alto rendimiento rediseñado que te permite jugar sin preocupaciones. Disfruta de la nítida pantalla FHD de 1080p para jugar sin problemas, y de la rapidísima GPU NVIDIA® GeForce RTX™ 3050 Ti para potenciar los juegos más populares de hoy, incluidos los títulos modernos.',
+    features: {
+      cpu: {
+        title: 'Procesador',
+        text: `AMD Ryzen 5 5600H
+            Velocidad: 3,30 GHz – 4,20 GHz
+            Nucleos: 6
+            Subprocesos: 12`
+      },
+      ram: {
+        title: 'Memoria',
+        text: `Capacidad: 8GB
+            Tipo: DDR4
+            Expandible: 64GB`
+      },
+      screen: {
+        title: 'Pantalla',
+        text: `Pulgadas: 15.6"
+            Resolución: FULL HD
+            Tecnología: IPS
+            Hz: 120`
+      },
+      gpu: {
+        title: 'Gráficos',
+        text: `NVIDIA GeForce RTX 3050 Ti
+            Memoria de Video: 4GB GDDR6`
+      },
+      storage: {
+        title: 'Almacenamiento',
+        text: `Capacidad: 256 GB
+            Tipo: SSD
+            Tecnología: PCIe 3.0 NVMe
+            Slot M.2 Adicional`
+      },
+      connectivity: {
+        title: 'Conectividad',
+        text: `WiFi 6 ( 802.11 ax)
+            Bluetooth®
+            Ethernet: Si`
+      },
+      os: {
+        title: 'Sistema Operativo',
+        text: `Windows 11
+            Versión: Home 64 Bits`
+      },
+      ports: {
+        title: 'Puertos',
+        text: `USB-C® 3.2 Gen 1
+            2x USB 3.2 Gen 1
+            HDMI 2.0
+            RJ-45
+            Headphone / microphone`
+      },
+      other: {
+        title: 'Otras características',
+        text: `Teclado Retroiluminado
+            Webcam 720p
+            Pad Numérico
+            Nahimic Audio`
+      },
+      model: {
+        title: 'Modelo',
+        text: `Marca: Lenovo
+            Linea: IdeaPad Gaming 3
+            Modelo: 82K201XCUS`
+      },
+      dimensions: {
+        title: 'Dimensiones y peso',
+        text: `35,96 x 25,19 x 2,41 cm
+            Peso: 2,25 kg
+            Chasis: Plástico`
+      },
+      usage: {
+        title: 'Uso recomendado',
+        text: 'Ofimática, Multimedia, Internet, Gaming, Diseño, Programación'
+      }
+    }
+  },
+  {
+    // source: https://tunotebook.com.ar/notebooks/asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb/
+    id: 'asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb',
+    name: 'Asus Vivobook Pro 14 Oled Core i5 11300H 8GB 256GB',
+    category: 'notebooks',
+    brand: 'Asus',
+    stock: 12,
+    price: 284_890,
+    priceCurrency: 'ARS',
+    images: [
+      '3-01-600x600.jpg',
+      '3-02-600x600.jpg',
+      '3-03-600x600.jpg',
+      '3-04-600x600.jpg',
+      '3-05-600x600.jpg',
+      '3-06-600x600.jpg',
+      '3-07-600x600.jpg'
+    ],
+    banner: '3-banner-idepad-gaming-3-ryzen.jpg',
     description: 'La Lenovo IdeaPad Gaming 3 mejora tu juego y nivela el campo de juego. Diseñado con la última generación de procesadores AMD Ryzen 5 y gráficos NVIDIA® GeForce® RTX, memoria DDR4 y opciones de almacenamiento PCIe SSD, este portátil para juegos proyecta una confianza silenciosa y serena con visuales suaves y cristalinas y un juego sin interrupciones. La IdeaPad Gaming 3 también se mantiene fresca, con un sistema térmico de alto rendimiento rediseñado que te permite jugar sin preocupaciones. Disfruta de la nítida pantalla FHD de 1080p para jugar sin problemas, y de la rapidísima GPU NVIDIA® GeForce RTX™ 3050 Ti para potenciar los juegos más populares de hoy, incluidos los títulos modernos.',
     features: {
       cpu: {

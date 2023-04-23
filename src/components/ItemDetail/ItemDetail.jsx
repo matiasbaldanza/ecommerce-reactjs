@@ -26,7 +26,7 @@ function ItemDetail ({ ...props }) {
           </div>
         </div>
 
-        <ProductImage image={images[0]} alt={name} className='basis-3/5' />
+        <ProductImage id={id} src={images[0]} alt={name} className='basis-3/5' />
         {/* TODO: Carousel */}
         {/* <div
           className='w-1/2 carousel'
@@ -46,7 +46,7 @@ function ItemDetail ({ ...props }) {
         </div> */}
       </header>
       <main className='flex flex-col items-center gap-10 card bg-base-100'>
-        <ProductImage image={banner} alt={`Banner del producto ${name}`} />
+        <ProductImage id={id} src={banner} alt={`Banner del producto ${name}`} />
         <ProductDescription {...{ name, description }} />
         <ProductSpecs features={features} />
       </main>
