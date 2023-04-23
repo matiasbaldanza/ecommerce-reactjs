@@ -5,11 +5,10 @@ function ProductDescription ({ name, description }) {
         className='text-2xl card-title'
       >{name}
       </h2>
-      <p
-        className='text-lg'
-      >
-        {description}
-      </p>
+      {
+        description && description.length > 0 &&
+          <p className='text-lg'>{description}</p>
+      }
     </section>
   )
 }
