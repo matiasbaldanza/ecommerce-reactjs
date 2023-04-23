@@ -1,6 +1,8 @@
-function ProductImage ({ image, alt }) {
+import clsx from 'clsx'
+
+function ProductImage ({ image, alt, ...props }) {
   return (
-    <figure>
+    <figure className={clsx('w-full', props.className)}>
       <img
         className='w-full rounded-xl'
         src={image}

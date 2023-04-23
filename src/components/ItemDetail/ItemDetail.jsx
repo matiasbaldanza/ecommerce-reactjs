@@ -6,6 +6,7 @@ import ProductTags from '../ProductTags/ProductTags'
 import ProductInfo from '../ProductInfo/ProductInfo'
 import ProductImage from '../ProductImage/ProductImage'
 import ProductDescription from '../ProductDescription/ProductDescription'
+import ProductSpecs from '../ProductSpecs/ProductSpecs'
 
 function ItemDetail ({ ...props }) {
   const {
@@ -22,7 +23,7 @@ function ItemDetail ({ ...props }) {
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
         </div>
 
-        <ProductImage image={images[0]} alt={name} />
+        <ProductImage image={images[0]} alt={name} className='basis-3/5' />
         {/* TODO: Carousel */}
         {/* <div
           className='w-1/2 carousel'
@@ -44,44 +45,7 @@ function ItemDetail ({ ...props }) {
       <main className='flex flex-col items-center gap-10 card bg-base-100'>
         <ProductImage image={banner} alt={`Banner del producto ${name}`} />
         <ProductDescription {...{ name, description }} />
-        <section className='flex flex-col items-center gap-4'>
-          <h2 className='text-2xl card-title'>
-            Especificaciones
-          </h2>
-          <div className='grid grid-cols-4 gap-6'>
-            {
-              Object.entries(features).map(([key, value]) => {
-                return (
-                  <div
-                    key={key}
-                    className='relative flex flex-row gap-2 p-6 pt-16 card bg-slate-100'
-                  >
-                    <div
-                      className='absolute w-16 rounded-lg top-1 right-1 aspect-square'
-                    >
-                      <img
-                        src={`/public/feature-icons/${key}.png`} alt='cpu-icon'
-                      />
-                    </div>
-                    <div>
-                      <h3 className='pb-2 text-xl card-title text-primary'>
-                        <Balancer>{value.title}</Balancer>
-                      </h3>
-                      <p
-                        className='text-sm'
-                      >
-                        <Balancer>
-                          {value.text.split('\n').map((line, index) => <span key={index}>{line}<br /></span>)}
-                        </Balancer>
-                      </p>
-                    </div>
-                  </div>
-                )
-              }
-              )
-}
-          </div>
-        </section>
+        <ProductSpecs features={features} />
       </main>
     </article>
   )
