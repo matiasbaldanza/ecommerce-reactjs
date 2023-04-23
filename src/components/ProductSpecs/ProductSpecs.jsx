@@ -1,4 +1,5 @@
 import Balancer from 'react-wrap-balancer'
+import { PUBLIC_IMG_PATH } from '../../utils/globalConstants'
 
 function ProductSpecs ({ features }) {
   return (
@@ -18,7 +19,7 @@ function ProductSpecs ({ features }) {
               className='absolute w-16 rounded-lg top-1 right-1 aspect-square'
             >
               <img
-                src={`/public/feature-icons/${key}.png`} alt='cpu-icon'
+                src={`${PUBLIC_IMG_PATH.featureIcons}/${key}.png`} alt='cpu-icon'
               />
             </div>
             <div>
