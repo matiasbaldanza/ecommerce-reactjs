@@ -1,10 +1,10 @@
-import ItemCount from '../ItemCount/ItemCount'
 import Balancer from 'react-wrap-balancer'
 
 // Components
 import ProductTags from '../ProductTags/ProductTags'
 import ProductInfo from '../ProductInfo/ProductInfo'
 import ProductImage from '../ProductImage/ProductImage'
+import ItemCount from '../ItemCount/ItemCount'
 import ProductDescription from '../ProductDescription/ProductDescription'
 import ProductSpecs from '../ProductSpecs/ProductSpecs'
 
@@ -21,6 +21,9 @@ function ItemDetail ({ ...props }) {
         <div className='flex flex-col gap-4 text-xl basis-2/5 '>
           <ProductTags {...{ brand, category }} />
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
+          <div className='flex flex-col items-center w-full pt-10'>
+            <ItemCount initial={1} stock={stock} onAdd={(count) => console.log('Cantidad agregada ', count)} />
+          </div>
         </div>
 
         <ProductImage image={images[0]} alt={name} className='basis-3/5' />

@@ -16,7 +16,7 @@ function ItemCount ({ initial, stock, onAdd }) {
   return (
     <div className='relative w-40'>
       <button
-        className='absolute top-0 left-0 w-6 rounded-r-none btn'
+        className='absolute top-0 left-0 w-6 rounded-r-none btn btn-primary'
         onClick={decrement}
       >-
       </button>
@@ -30,12 +30,12 @@ function ItemCount ({ initial, stock, onAdd }) {
         readOnly
       />
       <button
-        className='absolute top-0 right-0 w-6 rounded-l-none btn'
+        className='absolute top-0 right-0 w-6 rounded-l-none btn btn-primary'
         onClick={increment}
       >+
       </button>
       <button
-        className='w-full mt-2 btn btn-md'
+        className='w-full mt-2 btn btn-md btn-primary'
         onClick={() => onAdd(count)}
         disabled={!stock}
       >

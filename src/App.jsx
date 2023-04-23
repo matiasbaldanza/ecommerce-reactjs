@@ -14,7 +14,7 @@ function App () {
     <div className='container m-auto max-w-7xl'>
       <NavBar />
       <ItemDetailContainer
-        productId={3}
+        productId={1}
       />
       {/* <ItemListContainer>
         <Greeting />
