@@ -4,13 +4,13 @@ import Balancer from 'react-wrap-balancer'
 // Componentes
 import TextWithLineBreaks from '../TextWithLineBreaks/TextWithLineBreaks'
 import Price from '../Price/Price'
-import ProductImage from '../ProductImage/ProductImage'
+import ProductPreview from '../ProductPreview/ProductPreview'
 
 function Item ({ ...props }) {
   const { id, name, price, priceCurrency, stock, images } = props
   return (
     <article className='shadow-xl w-72 card bg-base-100'>
-      <ProductImage id={id} src={images[0]} alt={name} />
+      <ProductPreview id={id} images={images} alt={name} />
       <div className='card-body'>
         <h2 className='card-title'>
           <Balancer>
