@@ -5,7 +5,7 @@ const products = [
     name: `Alienware M15 R7 
     15.6″ 240hz 
     Core i7 12700H 
-    16GB 512GB 
+    16GB / 512GB 
     RTX 3070Ti`,
     category: 'gamer',
     brand: 'Alienware',
@@ -105,7 +105,11 @@ const products = [
   {
     // source: https://tunotebook.com.ar/gamer/msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb/
     id: 'msi-pulse-gl76-17-3-144hz-i7-12th-gen-16gb-512gb-rtx-3070-8gb',
-    name: 'MSI Pulse GL76 17.3″ 144hz i7 12th Gen 16GB 512GB RTX 3070 8GB',
+    name: `MSI Pulse GL76 
+    17.3″ 144hz 
+    i7 12th Gen 
+    16GB / 512GB 
+    RTX 3070 8GB`,
     category: 'gamer',
     brand: 'Alienware',
     stock: 5,
@@ -202,7 +206,11 @@ const products = [
   {
     // source: https://tunotebook.com.ar/gamer/lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti/
     id: 'lenovo-ideapad-gaming-3-120hz-ryzen-5-8gb-256gb-rtx-3050ti',
-    name: 'Lenovo IdeaPad Gaming 3 15.6″ 120hz Ryzen 5 8GB 256GB RTX 3050Ti',
+    name: `Lenovo IdeaPad Gaming 3 
+    15.6″ 120hz 
+    Ryzen 5 
+    8GB / 256GB 
+    RTX 3050Ti`,
     category: 'gamer',
     brand: 'Lenovo',
     stock: 5,
@@ -299,7 +307,10 @@ const products = [
   {
     // source: https://tunotebook.com.ar/notebooks/asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb/
     id: 'asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb',
-    name: 'Asus Vivobook Pro 14 Oled Core i5 11300H 8GB 256GB',
+    name: `Asus Vivobook Pro 
+    14 Oled 
+    Core i5 11300H 
+    8GB / 256GB`,
     category: 'notebooks',
     brand: 'Asus',
     stock: 12,
@@ -392,7 +403,11 @@ const products = [
   {
     // source: https://tunotebook.com.ar/notebooks/asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450/
     id: 'asus-zenbook-flip-2en1-ryzen-7-5700u-8gb-256gb-geforce-mx450',
-    name: 'Asus ZenBook Flip 2en1 15.6″ Ryzen 7 5700U 8GB 256GB GeForce MX450',
+    name: `Asus ZenBook Flip 2en1 
+    15.6″ 
+    Ryzen 7 5700U 
+    8GB / 256GB 
+    GeForce MX450`,
     category: 'notebooks',
     brand: 'Asus',
     stock: 9,
@@ -489,7 +504,10 @@ const products = [
   {
     // source: https://tunotebook.com.ar/notebooks/lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd/
     id: 'lenovo-ideapad-3-14-ryzen-5-8gb-256-gb-ssd',
-    name: 'Lenovo IdeaPad 3 14″ Ryzen 5 8GB 256 GB SSD',
+    name: `Lenovo IdeaPad 3 
+    14″ 
+    Ryzen 5 
+    8GB / 256GB SSD`,
     category: 'notebooks',
     brand: 'Asus',
     stock: 9,
