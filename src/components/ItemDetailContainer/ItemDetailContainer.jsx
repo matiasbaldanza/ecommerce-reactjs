@@ -5,11 +5,11 @@ import { useParams } from 'react-router-dom'
 // Componentes
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-function ItemDetailContainer ({ productId }) { // TEMP: remove prop productId, which will be passed by router
+function ItemDetailContainer () {
   const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(true)
 
-  // const { productId } = useParams()
+  const { productId } = useParams()
 
   useEffect(() => {
     setLoading(true)
