@@ -17,8 +17,8 @@ export const CATEGORIES = [
     route: 'gamer'
   },
   {
-    title: 'Accesorios',
-    route: 'accesorios'
+    title: 'Gadgets',
+    route: 'gadgets'
   }
 ]
 
