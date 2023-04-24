@@ -2,6 +2,6 @@
 
 // Imágenes de productos
 export const PUBLIC_IMG_PATH = {
-  productImages: 'public/product-images',
-  featureIcons: 'public/feature-icons'
+  productImages: 'product-images',
+  featureIcons: 'feature-icons'
 }
