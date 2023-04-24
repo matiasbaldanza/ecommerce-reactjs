@@ -1,5 +1,3 @@
-import Balancer from 'react-wrap-balancer'
-
 // Components
 import ProductTags from '../ProductTags/ProductTags'
 import ProductInfo from '../ProductInfo/ProductInfo'
