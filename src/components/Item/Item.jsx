@@ -8,7 +8,7 @@ function Item ({ ...props }) {
   const { id, name, price, priceCurrency, stock, images } = props
   return (
     <article className='shadow-xl w-72 card bg-base-100'>
-      <figure><ProductImage id={id} src={images[0]} alt={name} /></figure>
+      <ProductImage id={id} src={images[0]} alt={name} />
       <div className='card-body'>
         <h2 className='card-title'>{name}</h2>
         <Price price={price} currency={priceCurrency} />
