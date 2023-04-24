@@ -22,7 +22,12 @@ function ItemDetail ({ ...props }) {
           <ProductTags {...{ brand, category }} />
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
           <div className='flex flex-col items-center w-full pt-10'>
-            <ItemCount initial={1} stock={stock} onAdd={(count) => console.log('Cantidad agregada ', count)} />
+            {/* TODO: Agregar al carrito */}
+            <ItemCount
+              initial={1}
+              stock={stock}
+              onAdd={(count) => console.log('Cantidad agregada ', count)}
+            />
           </div>
         </div>
 

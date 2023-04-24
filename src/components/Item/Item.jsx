@@ -6,7 +6,6 @@ import ProductImage from '../ProductImage/ProductImage'
 
 function Item ({ ...props }) {
   const { id, name, price, priceCurrency, stock, images } = props
-  console.log(images[0])
   return (
     <article className='shadow-xl w-72 card bg-base-100'>
       <figure><ProductImage id={id} src={images[0]} alt={name} /></figure>
