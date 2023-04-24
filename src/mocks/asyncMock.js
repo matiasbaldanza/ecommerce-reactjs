@@ -579,13 +579,13 @@ const products = [
   }
 ]
 
-const HALF_SECOND = 500
+const DELAY = 200
 
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products)
-    }, HALF_SECOND)
+    }, DELAY)
   })
 }
 
@@ -593,7 +593,7 @@ export const getProductById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(prod => prod.id === id))
-    }, HALF_SECOND)
+    }, DELAY)
   })
 }
 
@@ -601,6 +601,6 @@ export const getProductsByCategory = (category) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(prod => prod.category === category))
-    }, HALF_SECOND)
+    }, DELAY)
   })
 }
