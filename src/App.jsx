@@ -22,9 +22,10 @@ function App () {
             {ANNOUNCEMENT.showReportErrorButton && <ReportErrorButton />}
           </AnnouncementBar>
       }
-      <div className='container m-auto max-w-7xl'>
+      <div className='container flex flex-col gap-5 m-auto max-w-7xl'>
         <BrowserRouter>
           <NavBar />
+          <Greeting />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
