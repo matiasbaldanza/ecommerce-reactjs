@@ -9,8 +9,8 @@ function ItemListContainer ({ ...props }) {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  // const { categoryId } = useParams()
-  const { categoryId } = getProducts // TEMP
+  const { categoryId } = useParams()
+  // const { categoryId } = getProducts // TEMP
 
   useEffect(() => {
     setLoading(true)
@@ -42,3 +42,5 @@ function ItemListContainer ({ ...props }) {
 }
 
 export default ItemListContainer
+
+//

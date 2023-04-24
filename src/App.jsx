@@ -12,8 +12,6 @@ import Greeting from './components/Greeting/Greeting'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
-// Temp
-
 function App () {
   return (
     <div>

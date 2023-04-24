@@ -7,7 +7,7 @@ function CategoriesMenu ({ menuItems }) {
         menuItems.map((menuItem) => {
           return (
             <li
-              key={`topMenu-${menuItem.title}`}
+              key={`categories-menu-${menuItem.route}`}
             ><NavLink to={`/category/${menuItem.route}`}>{menuItem.title}</NavLink>
             </li>
           )
