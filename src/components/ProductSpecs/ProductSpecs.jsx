@@ -1,5 +1,6 @@
 import Balancer from 'react-wrap-balancer'
 import { PUBLIC_IMG_PATH } from '../../utils/globalConstants'
+import { formatTextWithLineBreaks } from '../../utils/textUtils'
 
 function ProductSpecs ({ features }) {
   return (
@@ -30,7 +31,7 @@ function ProductSpecs ({ features }) {
                 className='text-sm'
               >
                 <Balancer>
-                  {value.text.split('\n').map((line, index) => <span key={index}>{line}<br /></span>)}
+                  {formatTextWithLineBreaks(value.text)}
                 </Balancer>
               </p>
             </div>
