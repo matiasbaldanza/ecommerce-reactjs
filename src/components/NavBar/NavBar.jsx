@@ -8,9 +8,6 @@ import { CATEGORIES } from '../../utils/globalConstants'
 import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
 
-// Temp
-import withToast from '../../hoc/withToast'
-
 const cart = {
   cantItems: 2,
   items: [
@@ -31,8 +28,6 @@ const cart = {
 }
 
 function NavBar () {
-  const WithToastCartWidget = withToast(CartWidget)
-
   return (
     <div className='navbar bg-base-100'>
 
@@ -54,8 +49,7 @@ function NavBar () {
       <div className='justify-between flex-1'>
         <div />
         <CategoriesMenu menuItems={CATEGORIES} />
-        <WithToastCartWidget cart={cart} />
-        {/* <CartWidget cart={cart} /> */}
+        <CartWidget cart={cart} />
       </div>
     </div>
   )
