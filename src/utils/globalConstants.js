@@ -2,8 +2,8 @@
 
 // Imágenes de productos
 export const PUBLIC_IMG_PATH = {
-  productImages: 'product-images',
-  featureIcons: 'feature-icons'
+  productImages: '/product-images',
+  featureIcons: '/feature-icons'
 }
 
 // Rutas de la API - Menú de Categorías
