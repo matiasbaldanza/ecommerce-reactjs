@@ -1,8 +1,11 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-// Components
+// Temp Components
 import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
+import ReportErrorButton from './components/ReportErrorButton/ReportErrorButton'
+
+// Components
 import NavBar from './components/NavBar/NavBar'
 import Greeting from './components/Greeting/Greeting'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
@@ -15,7 +18,7 @@ function App () {
     <div>
       <AnnouncementBar className='relative'>
         <p>⚠️ En Construcción! ⚠️</p>
-
+        <ReportErrorButton />
       </AnnouncementBar>
       <div className='container m-auto max-w-7xl'>
         {/*       <BrowserRouter>
