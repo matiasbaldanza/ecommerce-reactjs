@@ -6,6 +6,22 @@ export const PUBLIC_IMG_PATH = {
   featureIcons: 'feature-icons'
 }
 
+// Rutas de la API - Menú de Categorías
+export const CATEGORIES = [
+  {
+    title: 'Notebooks',
+    route: 'notebooks'
+  },
+  {
+    title: 'Notebooks Gamer',
+    route: 'gamer'
+  },
+  {
+    title: 'Accesorios',
+    route: 'accesorios'
+  }
+]
+
 export const ANNOUNCEMENT = {
   active: true,
   showReportErrorButton: true,

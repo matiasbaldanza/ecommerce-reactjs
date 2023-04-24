@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// Data
+import { CATEGORIES } from '../../utils/globalConstants'
+
 // Componentes
 import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
@@ -25,21 +28,6 @@ const cart = {
 }
 
 function NavBar () {
-  const topMenu = [
-    {
-      title: 'Notebooks',
-      route: 'notebooks'
-    },
-    {
-      title: 'Notebooks Gamer',
-      route: 'gamer'
-    },
-    {
-      title: 'Accesorios',
-      route: 'accesorios'
-    }
-  ]
-
   return (
     <div className='mb-10 navbar bg-base-100'>
 
@@ -60,7 +48,7 @@ function NavBar () {
       {/* Menu */}
       <div className='justify-between flex-1'>
         <div />
-        <CategoriesMenu menuItems={topMenu} />
+        <CategoriesMenu menuItems={CATEGORIES} />
         <CartWidget cart={cart} />
       </div>
     </div>
