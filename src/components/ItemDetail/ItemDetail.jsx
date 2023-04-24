@@ -54,7 +54,7 @@ function ItemDetail ({ ...props }) {
             <ProductImage id={id} src={banner} alt={`Banner del producto ${name}`} />
         }
         <ProductDescription {...{ name, description }} />
-        <ProductSpecs features={features} />
+        {features && <ProductSpecs features={features} />}
       </main>
     </article>
   )
