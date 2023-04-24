@@ -511,7 +511,7 @@ const products = [
     category: 'notebooks',
     brand: 'Asus',
     stock: 9,
-    price: 279,
+    price: 279_890,
     priceCurrency: 'ARS',
     images: [
       '01.jpg',
@@ -598,6 +598,34 @@ const products = [
         text: 'Ofimática, Multimedia, Internet, edición básica'
       }
     }
+  },
+  {
+    // source: https://tunotebook.com.ar/kindle/new-kindle-paperwhite-6-8-16gb-resistente-al-agua-11va-gen-negro/
+    id: 'new-kindle-paperwhite-6-8-16gb-resistente-al-agua-11va-gen-negro',
+    name: `New Kindle Paperwhite 6.8″ 16GB 
+    Resistente al Agua 
+    11va Gen 
+    Negro`,
+    category: 'gadgets',
+    brand: 'Kindle',
+    stock: 7,
+    price: 81_890,
+    priceCurrency: 'ARS',
+    images: [
+      '01.jpg',
+      '02.jpg',
+      '03.jpg',
+      '04.jpg'
+    ],
+    banner: 'banner.jpg',
+    description: `
+    Sumérgete por completo en los libros donde y cuando quieras
+El Kindle Paperwhite es fino, ligero y fácil de transportar, para que puedas disfrutar de tus libros favoritos en cualquier momento. Gracias a nuestra pantalla Paperwhite sin reflejos de 300 ppp, ahora con un 10 % más de luz con el brillo máximo, podrás leer bajo cualquier luz. Además, ahora una sola carga por USB-C dura hasta 10 semanas.
+Zambúllete en la lectura
+El Kindle Paperwhite es resistente al agua, por lo que podrás usarlo con tranquilidad en más lugares todavía, estés en la playa o en la bañera. Gracias a la certificación IPX8, el Kindle Paperwhite soporta una inmersión accidental en agua dulce a una profundidad de hasta 2 metros durante un máximo de 60 minutos y, en agua salada, hasta 0,25 metros un máximo de 3 minutos.
+Mucho más que un libro
+Ahora puedes regular el tono de la pantalla de tu Kindle Paperwhite y elegir desde una luz blanca hasta una cálida luz ámbar, o programar cuándo cambia de un tono a otro para disfrutar de una lectura personalizada. También puedes ajustar el tamaño y el grosor de la fuente según prefieras.
+`
   }
 ]
 
