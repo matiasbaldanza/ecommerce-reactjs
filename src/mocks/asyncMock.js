@@ -2,7 +2,11 @@ const products = [
   {
     // source: https://tunotebook.com.ar/gamer/alienware-m15-r7-240hz-core-i7-12700h-32gb-512gb-rtx-3070ti/
     id: 'alienware-m15-r7-240hz-core-i7-12700h-16gb-512gb-rtx-3070ti',
-    name: 'Alienware M15 R7 15.6″ 240hz Core i7 12700H 16GB 512GB RTX 3070Ti',
+    name: `Alienware M15 R7 
+    15.6″ 240hz 
+    Core i7 12700H 
+    16GB 512GB 
+    RTX 3070Ti`,
     category: 'gamer',
     brand: 'Alienware',
     stock: 10,

@@ -1,6 +1,8 @@
-import Balancer from 'react-wrap-balancer'
 import { PUBLIC_IMG_PATH } from '../../utils/globalConstants'
-import { formatTextWithLineBreaks } from '../../utils/textUtils'
+import Balancer from 'react-wrap-balancer'
+
+// Componentes
+import TextWithLineBreaks from '../TextWithLineBreaks/TextWithLineBreaks'
 
 function ProductSpecs ({ features }) {
   return (
@@ -24,14 +26,14 @@ function ProductSpecs ({ features }) {
               />
             </div>
             <div>
-              <h3 className='pb-2 text-xl card-title text-primary'>
+              <h3 className='pb-2 text-xl leading-tight card-title text-primary'>
                 <Balancer>{value.title}</Balancer>
               </h3>
               <p
                 className='text-sm'
               >
                 <Balancer>
-                  {formatTextWithLineBreaks(value.text)}
+                  <TextWithLineBreaks>{value.text}</TextWithLineBreaks>
                 </Balancer>
               </p>
             </div>

@@ -1,3 +1,4 @@
+import TextWithLineBreaks from '../TextWithLineBreaks/TextWithLineBreaks'
 import Price from '../Price/Price'
 
 function ProductInfo ({ name, price, priceCurrency, stock }) {
@@ -5,7 +6,7 @@ function ProductInfo ({ name, price, priceCurrency, stock }) {
     <>
       <h1
         className='text-3xl font-bold card-title'
-      >{name}
+      ><TextWithLineBreaks>{name}</TextWithLineBreaks>
       </h1>
       <div>
         Precio exclusivo:
