@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Temp Components
+import { ANNOUNCEMENT } from './utils/globalConstants'
 import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
 import ReportErrorButton from './components/ReportErrorButton/ReportErrorButton'
 
@@ -16,10 +17,13 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 function App () {
   return (
     <div>
-      <AnnouncementBar className='relative'>
-        <p>⚠️ En Construcción! ⚠️</p>
-        <ReportErrorButton />
-      </AnnouncementBar>
+      {
+        ANNOUNCEMENT.active &&
+          <AnnouncementBar style={ANNOUNCEMENT.style.secondary}>
+            <p>{ANNOUNCEMENT.title}</p>
+            {ANNOUNCEMENT.showReportErrorButton && <ReportErrorButton />}
+          </AnnouncementBar>
+      }
       <div className='container m-auto max-w-7xl'>
         <BrowserRouter>
           <NavBar />

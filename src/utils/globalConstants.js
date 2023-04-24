@@ -5,3 +5,19 @@ export const PUBLIC_IMG_PATH = {
   productImages: 'product-images',
   featureIcons: 'feature-icons'
 }
+
+export const ANNOUNCEMENT = {
+  active: true,
+  showReportErrorButton: true,
+  title: '⚠️ En Construcción! ⚠️',
+  style: {
+    error: 'bg-error',
+    info: 'bg-info',
+    warning: 'bg-warning',
+    success: 'bg-success',
+    primary: 'bg-primary',
+    secondary: 'bg-secondary',
+    accent: 'bg-accent',
+    ghost: 'bg-ghost'
+  }
+}
