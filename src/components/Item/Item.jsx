@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Balancer from 'react-wrap-balancer'
 
 // Componentes
 import TextWithLineBreaks from '../TextWithLineBreaks/TextWithLineBreaks'
@@ -11,7 +12,11 @@ function Item ({ ...props }) {
     <article className='shadow-xl w-72 card bg-base-100'>
       <ProductImage id={id} src={images[0]} alt={name} />
       <div className='card-body'>
-        <h2 className='card-title'><TextWithLineBreaks>{name}</TextWithLineBreaks></h2>
+        <h2 className='card-title'>
+          <Balancer>
+            <TextWithLineBreaks>{name}</TextWithLineBreaks>
+          </Balancer>
+        </h2>
         <Price price={price} currency={priceCurrency} />
         <p>Stock disponible: {stock}</p>
         <footer className='flex justify-center mt-6 card-actions'>
