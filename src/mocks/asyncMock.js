@@ -17,9 +17,9 @@ const products = [
       'public/product-images/1-06-600x600.jpg',
       'public/product-images/1-07-600x600.jpg',
       'public/product-images/1-08-600x600.jpg',
-      'public/product-images/1-09-600x600.jpg',
-      'public/product-images/1-banner-alienware-m15-r7.jpg'
+      'public/product-images/1-09-600x600.jpg'
     ],
+    banner: 'public/product-images/1-banner-alienware-m15-r7.jpg',
     description: 'Obtén la ventaja que necesitas con la tecnología de refrigeración Alienware Cryo-tech™, que incorpora ventiladores con una nueva configuración y más del doble de aspas en un diseño un 37,5 % más fino que el de la generación anterior. El diseño con doble ventilador, que da prioridad al rendimiento, absorbe aire frío por las rejillas superior e inferior y expulsa el aire caliente por los lados izquierdo y derecho y la parte trasera. De este modo, se garantiza una experiencia de juego excepcional.',
     features: {
       cpu: {
@@ -113,9 +113,9 @@ const products = [
       'public/product-images/2-04-600x600.jpg',
       'public/product-images/2-05-600x600.jpg',
       'public/product-images/2-06-600x600.jpg',
-      'public/product-images/2-07-600x600.jpg',
-      'public/product-images/2-banner-pulse-GL76.jpg'
+      'public/product-images/2-07-600x600.jpg'
     ],
+    banner: 'public/product-images/2-banner-pulse-GL76.jpg',
     description: 'El más adaptable al cambio es el que sobrevive y evoluciona. Elige el espíritu del dragón y evoluciona con los últimos portátiles GL76 Gaming de MSI equipados con procesadores Intel® Core ™ i7 de 12va generación y las últimas tarjetas gráficas GeForce RTX diseñadas para jugadores con estilo. Su pantalla IPS de 144HZ con velocidad y claridad sin precedentes te ofrece las imágenes más vibrantes para que nunca pierdas el ritmo.',
     features: {
       cpu: {
@@ -209,9 +209,9 @@ const products = [
       'public/product-images/3-04-600x600.jpg',
       'public/product-images/3-05-600x600.jpg',
       'public/product-images/3-06-600x600.jpg',
-      'public/product-images/3-07-600x600.jpg',
-      '3-banner-idepad-gaming-3-ryzen.jpg'
+      'public/product-images/3-07-600x600.jpg'
     ],
+    banner: '3-banner-idepad-gaming-3-ryzen.jpg',
     description: 'La Lenovo IdeaPad Gaming 3 mejora tu juego y nivela el campo de juego. Diseñado con la última generación de procesadores AMD Ryzen 5 y gráficos NVIDIA® GeForce® RTX, memoria DDR4 y opciones de almacenamiento PCIe SSD, este portátil para juegos proyecta una confianza silenciosa y serena con visuales suaves y cristalinas y un juego sin interrupciones. La IdeaPad Gaming 3 también se mantiene fresca, con un sistema térmico de alto rendimiento rediseñado que te permite jugar sin preocupaciones. Disfruta de la nítida pantalla FHD de 1080p para jugar sin problemas, y de la rapidísima GPU NVIDIA® GeForce RTX™ 3050 Ti para potenciar los juegos más populares de hoy, incluidos los títulos modernos.',
     features: {
       cpu: {
@@ -303,6 +303,14 @@ export const getProductById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(prod => prod.id === id))
+    }, 500)
+  })
+}
+
+export const getProductsByCategory = (category) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.find(prod => prod.category === category))
     }, 500)
   })
 }
