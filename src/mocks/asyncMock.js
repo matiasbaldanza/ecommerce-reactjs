@@ -37,7 +37,8 @@ const products = [
             Expandible: 64GB`
       },
       screen: {
-        title: `Pulgadas: 15.6″
+        title: 'Pantalla',
+        text: `Pulgadas: 15.6″
             Resolución: QHD 2560×1440
             Tecnología: WVA G-Sync
             Hz: 240Hz`
@@ -132,7 +133,8 @@ const products = [
             Ampliable: 64GB`
       },
       screen: {
-        title: `Pulgadas: 17.3″
+        title: 'Pantalla',
+        text: `Pulgadas: 17.3"
             Resolución: Full HD
             Tecnología: IPS
             Hz: 144hz`
@@ -228,7 +230,8 @@ const products = [
             Expandible: 64GB`
       },
       screen: {
-        title: `Pulgadas: 15.6″
+        title: 'Pantalla',
+        text: `Pulgadas: 15.6"
             Resolución: FULL HD
             Tecnología: IPS
             Hz: 120`
