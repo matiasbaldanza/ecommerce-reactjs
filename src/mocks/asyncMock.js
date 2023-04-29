@@ -211,7 +211,7 @@ const products = [
       'public/product-images/3-06-600x600.jpg',
       'public/product-images/3-07-600x600.jpg'
     ],
-    banner: '3-banner-idepad-gaming-3-ryzen.jpg',
+    banner: 'public/product-images/3-banner-idepad-gaming-3-ryzen.jpg',
     description: 'La Lenovo IdeaPad Gaming 3 mejora tu juego y nivela el campo de juego. Diseñado con la última generación de procesadores AMD Ryzen 5 y gráficos NVIDIA® GeForce® RTX, memoria DDR4 y opciones de almacenamiento PCIe SSD, este portátil para juegos proyecta una confianza silenciosa y serena con visuales suaves y cristalinas y un juego sin interrupciones. La IdeaPad Gaming 3 también se mantiene fresca, con un sistema térmico de alto rendimiento rediseñado que te permite jugar sin preocupaciones. Disfruta de la nítida pantalla FHD de 1080p para jugar sin problemas, y de la rapidísima GPU NVIDIA® GeForce RTX™ 3050 Ti para potenciar los juegos más populares de hoy, incluidos los títulos modernos.',
     features: {
       cpu: {
@@ -291,11 +291,13 @@ const products = [
   }
 ]
 
+const HALF_SECOND = 500
+
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products)
-    }, 500)
+    }, HALF_SECOND)
   })
 }
 
@@ -303,7 +305,7 @@ export const getProductById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(prod => prod.id === id))
-    }, 500)
+    }, HALF_SECOND)
   })
 }
 
@@ -311,6 +313,6 @@ export const getProductsByCategory = (category) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(prod => prod.category === category))
-    }, 500)
+    }, HALF_SECOND)
   })
 }
