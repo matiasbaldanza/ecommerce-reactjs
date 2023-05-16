@@ -1,2 +1,2 @@
-export * from './ItemDetailContainer';
-export { default } from './ItemDetailContainer';
+export * from './ItemDetailContainer'
+export { default } from './ItemDetailContainer'

@@ -1,2 +1,2 @@
-export * from './ItemDetail';
-export { default } from './ItemDetail';
+export * from './ItemDetail'
+export { default } from './ItemDetail'

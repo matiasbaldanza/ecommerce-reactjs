@@ -1,2 +1,2 @@
-export * from './ReportErrorButton';
-export { default } from './ReportErrorButton';
+export * from './ReportErrorButton'
+export { default } from './ReportErrorButton'

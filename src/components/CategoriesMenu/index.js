@@ -1,2 +1,2 @@
-export * from './CategoriesMenu';
-export { default } from './CategoriesMenu';
+export * from './CategoriesMenu'
+export { default } from './CategoriesMenu'

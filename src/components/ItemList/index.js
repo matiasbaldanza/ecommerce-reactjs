@@ -1,2 +1,2 @@
-export * from './ItemList';
-export { default } from './ItemList';
+export * from './ItemList'
+export { default } from './ItemList'

@@ -1,2 +1,2 @@
-export * from './TextWithLineBreaks';
-export { default } from './TextWithLineBreaks';
+export * from './TextWithLineBreaks'
+export { default } from './TextWithLineBreaks'

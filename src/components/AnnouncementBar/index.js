@@ -1,2 +1,2 @@
-export * from './AnnouncementBar';
-export { default } from './AnnouncementBar';
+export * from './AnnouncementBar'
+export { default } from './AnnouncementBar'

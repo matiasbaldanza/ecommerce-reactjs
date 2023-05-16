@@ -1,7 +1,5 @@
-import React from 'react';
-
-function ProductCard() {
-  return <div></div>;
+function ProductCard () {
+  return <div />
 }
 
-export default ProductCard;
+export default ProductCard

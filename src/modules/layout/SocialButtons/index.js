@@ -1,2 +1,2 @@
-export * from './SocialButtons';
-export { default } from './SocialButtons';
+export * from './SocialButtons'
+export { default } from './SocialButtons'

@@ -1,2 +1,2 @@
-export * from './ProductTags';
-export { default } from './ProductTags';
+export * from './ProductTags'
+export { default } from './ProductTags'
