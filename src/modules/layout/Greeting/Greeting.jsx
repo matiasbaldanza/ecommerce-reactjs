@@ -1,4 +1,4 @@
-function Greeting () {
+function Greeting ({ ...props }) {
   const styles = `mt-[-1rem] p-4 flex flex-col gap-0 p-4 items-center 
                   sm:mt-4 sm:items-start`
 
