@@ -10,7 +10,7 @@ import ReportErrorButton from '@/modules/ui/ReportErrorButton/ReportErrorButton'
 import Header from '@/modules/layout/Header/Header'
 import ItemListContainer from '@/modules/store/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from '@/modules/item/ItemDetailContainer/ItemDetailContainer'
-import Footer from '@/modules/layout/components/Footer/Footer'
+import Footer from '@/modules/layout/Footer/Footer'
 
 function App () {
   return (
