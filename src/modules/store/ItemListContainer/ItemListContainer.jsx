@@ -10,7 +10,6 @@ function ItemListContainer ({ ...props }) {
   const [loading, setLoading] = useState(true)
 
   const { categoryId } = useParams()
-  // const { categoryId } = getProducts // TEMP
 
   useEffect(() => {
     setLoading(true)
@@ -29,7 +28,7 @@ function ItemListContainer ({ ...props }) {
 
   return (
     <div
-      className='flex flex-col items-center w-full gap-4'
+      className='container flex flex-col items-center w-full gap-4 mx-auto'
     >
       {props.children}
       {
