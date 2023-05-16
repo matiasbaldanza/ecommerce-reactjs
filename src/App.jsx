@@ -7,7 +7,7 @@ import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
 import ReportErrorButton from './components/ReportErrorButton/ReportErrorButton'
 
 // Components
-import Header from './components/Header/Header'
+import Header from './modules/layout/Header/Header'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 

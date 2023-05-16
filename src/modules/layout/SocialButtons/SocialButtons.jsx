@@ -1,6 +1,6 @@
-import IconWhatsApp from '../../modules/ui/Icons/IconWhatsApp'
-import IconInstagram from '../../modules/ui/Icons/IconInstagram'
-import { SOCIAL_ACCOUNTS } from '../../utils/globalConstants'
+import IconWhatsApp from '../../ui/Icons/IconWhatsApp'
+import IconInstagram from '../../ui/Icons/IconInstagram'
+import { SOCIAL_ACCOUNTS } from '../../../utils/globalConstants'
 
 function SocialButtons () {
   return (

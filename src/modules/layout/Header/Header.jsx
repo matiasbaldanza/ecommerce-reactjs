@@ -1,13 +1,13 @@
 // Data
-import { CATEGORIES } from '../../utils/globalConstants'
+import { CATEGORIES } from '../../../utils/globalConstants'
 
 // Componentes
 import TopBanner from '../TopBanner/TopBanner'
 import SiteLogo from '../SiteLogo/SiteLogo'
 import Greeting from '../Greeting/Greeting'
 import SocialButtons from '../SocialButtons/SocialButtons'
-import CartWidget from '../CartWidget/CartWidget'
-import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
+import CartWidget from '../../../components/CartWidget/CartWidget'
+import CategoriesMenu from '../../../components/CategoriesMenu/CategoriesMenu'
 
 const cart = {
   cantItems: 2,
