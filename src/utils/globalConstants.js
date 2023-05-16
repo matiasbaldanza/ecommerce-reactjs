@@ -3,8 +3,22 @@
 // Imágenes de productos
 export const PUBLIC_IMG_PATH = {
   productImages: '/product-images',
-  featureIcons: '/feature-icons'
+  featureIcons: '/feature-icons',
+  images: '/images'
 }
+
+export const SOCIAL_ACCOUNTS = [
+  {
+    name: 'Instagram',
+    url: '#',
+    icon: 'IconInstagram'
+  },
+  {
+    name: 'WhatsApp',
+    url: '#',
+    icon: 'IconWhatsapp'
+  }
+]
 
 // Rutas de la API - Menú de Categorías
 export const CATEGORIES = [

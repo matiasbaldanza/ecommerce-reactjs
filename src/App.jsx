@@ -7,8 +7,7 @@ import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
 import ReportErrorButton from './components/ReportErrorButton/ReportErrorButton'
 
 // Components
-import NavBar from './components/NavBar/NavBar'
-import Greeting from './components/Greeting/Greeting'
+import Header from './components/Header/Header'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
@@ -24,8 +23,7 @@ function App () {
       }
       <div className='container flex flex-col gap-5 m-auto max-w-7xl'>
         <BrowserRouter>
-          <NavBar />
-          <Greeting />
+          <Header />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
