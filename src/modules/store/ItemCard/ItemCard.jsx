@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 import Balancer from 'react-wrap-balancer'
+import clsx from 'clsx'
 
 // Componentes
 import TextWithLineBreaks from '../../item/TextWithLineBreaks'
 import Price from '../../item/Price'
-import ProductPreview from '../../item/ProductPreview'
+import ProductPreview from '../ItemPreview'
 
 function ItemCard ({ ...props }) {
   const { id, name, price, priceCurrency, stock, images } = props
+  const styles = clsx(props.className, `border border-2 border-border card bg-background
+                                        `)
+
   return (
-    <article className='shadow-xl w-72 card bg-base-100'>
+    <article className={styles}>
       <ProductPreview id={id} images={images} alt={name} />
       <div className='card-body'>
         <h2 className='card-title'>

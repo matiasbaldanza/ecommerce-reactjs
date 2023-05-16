@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 // Componentes
-import ProductImage from '../ProductImage/ProductImage'
+import ProductImage from '@/modules/item/ProductImage/ProductImage'
 
-function ProductPreview ({ id, name, images }) {
+function ItemPreview ({ id, name, images }) {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseEnter = () => setIsHovered(true)
@@ -30,4 +30,4 @@ function ProductPreview ({ id, name, images }) {
   )
 }
 
-export default ProductPreview
+export default ItemPreview
