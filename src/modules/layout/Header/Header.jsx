@@ -42,9 +42,8 @@ function Header () {
         {/* Menu */}
         <div className='justify-between flex-1 px-8 sm:mt-2'>
           <CategoriesMenu menuItems={CATEGORIES} />
-          <div />
           <CartWidget
-            className={`fixed z-50 bg-blue-500 text-background rounded-full shadow-lg bottom-4 right-4
+            className={`fixed z-50 bg-brand text-background rounded-full shadow-lg bottom-4 right-4
                         sm:static sm:rounded-none sm:shadow-none sm:bottom-0 sm:right-0 sm:bg-background sm:text-foreground`}
             cart={cart}
           />

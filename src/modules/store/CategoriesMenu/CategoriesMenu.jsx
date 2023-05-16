@@ -2,7 +2,9 @@ import { NavLink } from 'react-router-dom'
 
 function CategoriesMenu ({ menuItems }) {
   return (
-    <ul className='menu menu-horizontal bg-base-100 rounded-box'>
+    <ul className={`menu menu-horizontal menu-compact bg-background rounded-box mt-4
+                    sm:menu-horizontal sm:menu-normal sm:mt-0`}
+    >
       {
         menuItems.map((menuItem) => {
           return (

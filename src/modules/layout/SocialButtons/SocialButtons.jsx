@@ -15,7 +15,7 @@ function SocialButtons () {
             title={account.name}
             target='_blank'
             rel='noreferrer'
-            className='flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full cursor-pointer'
+            className='flex items-center justify-center w-10 h-10 text-white rounded-full cursor-pointer bg-brand'
           >
             {account.name === 'Instagram' && <IconInstagram />}
             {account.name === 'WhatsApp' && <IconWhatsApp />}

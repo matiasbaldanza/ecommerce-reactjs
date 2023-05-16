@@ -6,6 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
+    --brand: 213.1 93.9% 67.8%; /* blue-500 */
   }
 
   .dark {
