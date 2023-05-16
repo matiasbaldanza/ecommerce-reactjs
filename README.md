@@ -1,16 +1,38 @@
-# Pre-entrega 2 curso de ReacjJS #39655 (2023)
+# Ecommerce con React.js
 
 - Curso: ReactJS (2023)
 - Comisión: 39655
 - Profesor: Francisco Pugh
 - Alumno: Matias Baldanza
-- Fecha: 2023-04-22
+- Fecha: 2023-05-16
 
-## Notas
+## Creado con
 
-- Librería de componentes: DaisyUI (TailwindCSS 3.3)
-- Build tool: Vite
-- Linter: StandardJS (ESLint)
+- [React.js](https://react.dev/)
+- Estilos: [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
+- Componentes UI: [DaisyUI](https://daisyui.com/docs/install/)
+- Base de datos: [Firebase](https://firebase.google.com/)
+- Build tool: [Vite](https://vitejs.dev/)
+- Linter: [StandardJS (ESLint)](https://standardjs.com/)
+
+## Pre-requerimientos
+
+Luego de clonar el repositorio, instalar las dependencias
+
+```bash
+pnpm install
+pnpm i firebase
+```
+
+## Ejecutar la aplicación
+
+Una vez instaladas las dependencias, ejecutar:
+
+```bash
+vite dev
+```
+
+La aplicación estará disponible en el [http://localhost:3000](http://localhost:3000)
 
 ## Demo
 
