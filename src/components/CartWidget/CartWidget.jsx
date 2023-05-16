@@ -1,11 +1,13 @@
-import React from 'react'
 import { pluralize } from '../../utils/textUtils'
+import clsx from 'clsx'
 
-function CartWidget ({ cart }) {
+function CartWidget ({ cart, ...props }) {
   const { cantItems, items, subTotal } = cart
+  const styles = clsx('dropdown dropdown-end',
+    props.className)
 
   return (
-    <div className='dropdown dropdown-end'>
+    <div className={styles}>
 
       {/* Badge */}
       <label tabIndex={0} className='btn btn-ghost btn-circle'>
