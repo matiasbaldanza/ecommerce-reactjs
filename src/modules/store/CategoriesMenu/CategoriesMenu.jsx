@@ -27,13 +27,22 @@ function CategoriesMenu ({ menuItems }) {
 }
 
 function MenuItems ({ items }) {
-  return items.map((item) => {
-    return (
-      <li key={`categories-menu-${item.route}`}>
-        <NavLink to={`/category/${item.route}`}>{item.title}</NavLink>
+  return (
+    <>
+      <li>
+        <NavLink to='/'>Todos</NavLink>   {/* Hardcodeado Link a '/' en las categorías. TODO: agregar categoria 'all' */}
       </li>
-    )
-  })
+      {
+    items.map((item) => {
+      return (
+        <li key={`categories-menu-${item.route}`}>
+          <NavLink to={`/category/${item.route}`}>{item.title}</NavLink>
+        </li>
+      )
+    })
+    }
+    </>
+  )
 }
 
 /* menu menu-vertical rounded-box mt-4 menu-compact */

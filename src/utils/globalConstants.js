@@ -31,10 +31,6 @@ export const CATEGORIES = [
     route: 'gamer'
   },
   {
-    title: 'Apple',
-    route: 'apple'
-  },
-  {
     title: 'Gadgets',
     route: 'gadgets'
   }
