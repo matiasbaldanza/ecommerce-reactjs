@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 // Data
 import { CATEGORIES } from '../../utils/globalConstants'
 
 // Componentes
+import SiteLogo from '../SiteLogo/SiteLogo'
 import CartWidget from '../CartWidget/CartWidget'
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu'
 
@@ -30,21 +30,7 @@ const cart = {
 function NavBar () {
   return (
     <div className='navbar bg-base-100'>
-
-      {/* Logo */}
-      <div className='flex-none'>
-        <Link
-          className='text-xl normal-case btn btn-ghost'
-          to='/'
-        >
-          tuPortátil
-          <span
-            className='block mx-1 text-xs text-center'
-          >TECHSTORE
-          </span>
-        </Link>
-      </div>
-
+      <SiteLogo />
       {/* Menu */}
       <div className='justify-between flex-1'>
         <div />
