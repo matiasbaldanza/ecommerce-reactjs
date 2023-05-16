@@ -19,7 +19,7 @@ export default {
       {
         mytheme: {
           primary: '#3b82f6', /* blue-500 */
-          'primary-focus': '#4506cb',
+          'primary-focus': '#2563eb', /* blue-600 */
           'primary-content': '#ffffff',
           secondary: '#f000b8',
           'secondary-focus': '#bd0091',

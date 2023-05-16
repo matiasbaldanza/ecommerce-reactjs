@@ -1,15 +1,16 @@
 import './globals.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-// Temp Components
+// Componentes para Demo (desactivados)
 import { ANNOUNCEMENT } from '@/utils/globalConstants'
 import AnnouncementBar from '@/modules/ui/AnnouncementBar/AnnouncementBar'
 import ReportErrorButton from '@/modules/ui/ReportErrorButton/ReportErrorButton'
 
-// Components
+// Componentes
 import Header from '@/modules/layout/Header/Header'
 import ItemListContainer from '@/modules/store/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from '@/modules/item/ItemDetailContainer/ItemDetailContainer'
+import Footer from '@/modules/layout/components/Footer/Footer'
 
 function App () {
   return (
@@ -31,7 +32,7 @@ function App () {
             <Route path='*' element={<h1>404 - NO ENCONTRADO</h1>} />
           </Routes>
         </BrowserRouter>
-
+        <Footer />
         {/* TEST ItemListCointainer */}
         {/*       <ItemListContainer>
         <Greeting />
