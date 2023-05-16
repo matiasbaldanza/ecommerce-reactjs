@@ -23,7 +23,7 @@ export const CATEGORIES = [
 ]
 
 export const ANNOUNCEMENT = {
-  active: true,
+  active: false,
   showReportErrorButton: true,
   title: '⚠️ Esta no es una tienda real. Es un ejercicio de programación! ⚠️',
   style: {
