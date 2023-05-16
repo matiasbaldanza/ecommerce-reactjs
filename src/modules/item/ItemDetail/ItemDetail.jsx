@@ -1,10 +1,10 @@
 // Components
-import ProductTags from '../ProductTags/ProductTags'
-import ProductInfo from '../ProductInfo/ProductInfo'
-import ProductImage from '../ProductImage/ProductImage'
-import ItemCount from '../ItemCount/ItemCount'
-import ProductDescription from '../ProductDescription/ProductDescription'
-import ProductSpecs from '../ProductSpecs/ProductSpecs'
+import ProductTags from '../ProductTags'
+import ProductInfo from '../ProductInfo'
+import ProductImage from '../ProductImage'
+import ItemCount from '../ItemCount'
+import ProductDescription from '../ProductDescription'
+import ProductSpecs from '../ProductSpecs'
 
 function ItemDetail ({ ...props }) {
   const {

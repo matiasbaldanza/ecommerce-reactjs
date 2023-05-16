@@ -1,4 +1,4 @@
-import Item from '@/modules/item/Item/Item'
+import Item from '@/modules/item/Item'
 
 function ItemList ({ products }) {
   return (

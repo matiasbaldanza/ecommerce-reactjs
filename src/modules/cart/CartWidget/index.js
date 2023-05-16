@@ -1,2 +1,2 @@
-export * from './CartBadge'
-export { default } from './CartBadge'
+export * from './CartWidget'
+export { default } from './CartWidget'

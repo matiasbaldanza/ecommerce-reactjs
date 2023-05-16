@@ -7,10 +7,10 @@ import AnnouncementBar from '@/modules/ui/AnnouncementBar/AnnouncementBar'
 import ReportErrorButton from '@/modules/ui/ReportErrorButton/ReportErrorButton'
 
 // Componentes
-import Header from '@/modules/layout/Header/Header'
-import ItemListContainer from '@/modules/store/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from '@/modules/item/ItemDetailContainer/ItemDetailContainer'
-import Footer from '@/modules/layout/Footer/Footer'
+import Header from '@/modules/layout/Header'
+import ItemListContainer from '@/modules/store/ItemListContainer'
+import ItemDetailContainer from '@/modules/item/ItemDetailContainer'
+import Footer from '@/modules/layout/Footer'
 
 function App () {
   return (

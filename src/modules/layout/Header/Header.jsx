@@ -2,12 +2,12 @@
 import { CATEGORIES } from '../../../utils/globalConstants'
 
 // Componentes
-import TopBanner from '../TopBanner/TopBanner'
-import SiteLogo from '../SiteLogo/SiteLogo'
-import Greeting from '../Greeting/Greeting'
-import SocialButtons from '@/modules/layout/SocialButtons/SocialButtons'
-import CartWidget from '@/modules/cart/CartWidget/CartWidget'
-import CategoriesMenu from '@/modules/store/CategoriesMenu/CategoriesMenu'
+import TopBanner from '../TopBanner'
+import SiteLogo from '../SiteLogo'
+import Greeting from '../Greeting'
+import SocialButtons from '@/modules/layout/SocialButtons'
+import CartWidget from '@/modules/cart/CartWidget'
+import CategoriesMenu from '@/modules/store/CategoriesMenu'
 
 const cart = {
   cantItems: 2,
