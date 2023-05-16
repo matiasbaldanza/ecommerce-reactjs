@@ -6,6 +6,16 @@
 - Alumno: Matias Baldanza
 - Fecha: 2023-05-16
 
+## Deploy
+
+Repo: https://github.com/matiasbaldanza/ecommerce-reactjs
+
+![Gif mostrando la navegación](README/matiasbaldanza-ecommerce-reactjs-demo-nav.gif)
+
+[Deploy en Vercel](https://ecommerce-reactjs-hazel.vercel.app)
+
+<hr />
+
 ## Creado con
 
 - [React.js](https://react.dev/)
@@ -24,6 +34,8 @@ pnpm install
 pnpm i firebase
 ```
 
+<hr />
+
 ## Ejecutar la aplicación
 
 Una vez instaladas las dependencias, ejecutar:
@@ -32,13 +44,7 @@ Una vez instaladas las dependencias, ejecutar:
 vite dev
 ```
 
-La aplicación estará disponible en el [http://localhost:3000](http://localhost:3000)
-
-## Demo
-
-![Gif mostrando la navegación](README/matiasbaldanza-reactjs-39655-pre-entrega-2-720p-24fps.gif)
-
-[Deploy en Vercel](https://coderhouse-reactjs-39655-matiasbaldanza-pre-entrega-2.vercel.app/)
+La aplicación estará disponible en el [http://localhost:5173](http://localhost:5173) (o un puerto alternativo)
 
 <hr />
 
