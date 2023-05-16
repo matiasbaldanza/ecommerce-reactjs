@@ -40,9 +40,13 @@ function Header () {
         <Greeting />
         <SocialButtons />
         {/* Menu */}
-        <div className='justify-between flex-1 px-8'>
+        <div className='justify-between flex-1 px-8 sm:'>
           <div />
-          <CartWidget cart={cart} />
+          <CartWidget
+            className={`fixed z-50 bg-blue-500 text-background rounded-full shadow-lg bottom-4 right-4
+                        sm:static sm:rounded-none sm:shadow-none sm:bottom-0 sm:right-0 sm:bg-background sm:text-foreground`}
+            cart={cart}
+          />
         </div>
       </div>
       <CategoriesMenu menuItems={CATEGORIES} />
