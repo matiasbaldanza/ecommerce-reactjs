@@ -8,7 +8,7 @@ import ReportErrorButton from './modules/ui/ReportErrorButton/ReportErrorButton'
 
 // Components
 import Header from './modules/layout/Header/Header'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainer from './modules/store/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App () {
