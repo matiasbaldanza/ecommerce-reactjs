@@ -1,5 +1,5 @@
 const openNewIssue = () => {
-  const url = 'https://github.com/matiasbaldanza/coderhouse-reactjs-39655-matiasbaldanza-pre-entrega-2/issues/new'
+  const url = 'https://github.com/matiasbaldanza/ecommerce-reactjs/issues/new'
   const win = window.open(url, '_blank')
   win.focus()
 }
