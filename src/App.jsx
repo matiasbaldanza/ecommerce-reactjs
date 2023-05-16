@@ -1,4 +1,4 @@
-import './App.css'
+import './globals.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Temp Components
