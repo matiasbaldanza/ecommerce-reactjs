@@ -1,11 +1,11 @@
-import Item from '@/modules/item/Item'
+import ItemCard from '../ItemCard'
 
 function ItemList ({ products }) {
   return (
     <div
       className='flex flex-wrap justify-center gap-6'
     >
-      {products.map((product) => <Item key={product.id} {...product} />)}
+      {products.map((product) => <ItemCard key={product.id} {...product} />)}
     </div>
   )
 }
