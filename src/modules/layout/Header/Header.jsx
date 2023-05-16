@@ -6,7 +6,7 @@ import TopBanner from '../TopBanner/TopBanner'
 import SiteLogo from '../SiteLogo/SiteLogo'
 import Greeting from '../Greeting/Greeting'
 import SocialButtons from '../SocialButtons/SocialButtons'
-import CartWidget from '../../../components/CartWidget/CartWidget'
+import CartWidget from '../../cart/CartWidget/CartWidget'
 import CategoriesMenu from '../../../components/CategoriesMenu/CategoriesMenu'
 
 const cart = {

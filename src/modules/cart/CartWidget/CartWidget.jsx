@@ -1,4 +1,4 @@
-import { pluralize } from '../../utils/textUtils'
+import { pluralize } from '../../../utils/textUtils'
 import clsx from 'clsx'
 
 function CartWidget ({ cart, ...props }) {
