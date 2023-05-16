@@ -2,14 +2,14 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Temp Components
-import { ANNOUNCEMENT } from './utils/globalConstants'
-import AnnouncementBar from './modules/ui/AnnouncementBar/AnnouncementBar'
-import ReportErrorButton from './modules/ui/ReportErrorButton/ReportErrorButton'
+import { ANNOUNCEMENT } from '@/utils/globalConstants'
+import AnnouncementBar from '@/modules/ui/AnnouncementBar/AnnouncementBar'
+import ReportErrorButton from '@/modules/ui/ReportErrorButton/ReportErrorButton'
 
 // Components
 import Header from './modules/layout/Header/Header'
-import ItemListContainer from './modules/store/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import ItemListContainer from '@/modules/store/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from '@/components/ItemDetailContainer/ItemDetailContainer'
 
 function App () {
   return (
