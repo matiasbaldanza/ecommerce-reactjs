@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getProductById } from '../../mocks/asyncMock'
+import { getProductById } from '@/mocks/asyncMock'
 import { useParams } from 'react-router-dom'
 
 // Componentes

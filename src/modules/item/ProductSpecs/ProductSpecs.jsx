@@ -1,4 +1,4 @@
-import { PUBLIC_IMG_PATH } from '../../utils/globalConstants'
+import { PUBLIC_IMG_PATH } from '@/utils/globalConstants'
 import Balancer from 'react-wrap-balancer'
 
 // Componentes

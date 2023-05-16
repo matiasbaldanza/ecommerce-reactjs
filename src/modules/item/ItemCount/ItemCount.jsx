@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import clsx from 'clsx'
-import { removeNumberInputControls } from '../../styles/styleUtils'
+import { removeNumberInputControls } from '@/styles/styleUtils'
 
 function ItemCount ({ initial, stock, onAdd }) {
   const [count, setCount] = useState(initial)
