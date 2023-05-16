@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Temp Components
 import { ANNOUNCEMENT } from './utils/globalConstants'
-import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
-import ReportErrorButton from './components/ReportErrorButton/ReportErrorButton'
+import AnnouncementBar from './modules/ui/AnnouncementBar/AnnouncementBar'
+import ReportErrorButton from './modules/ui/ReportErrorButton/ReportErrorButton'
 
 // Components
 import Header from './modules/layout/Header/Header'
