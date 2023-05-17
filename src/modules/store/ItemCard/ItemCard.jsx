@@ -5,32 +5,30 @@ import clsx from 'clsx'
 // Componentes
 import TextWithLineBreaks from '../../item/TextWithLineBreaks'
 import Price from '../../item/Price'
-import ProductPreview from '../ItemPreview'
+import ItemPreview from '../ItemPreview'
 
 function ItemCard ({ ...props }) {
-  const { id, name, price, priceCurrency, stock, images } = props
-  const styles = clsx(props.className, `border border-2 border-border card bg-background
+  const { id, name, category, price, priceCurrency, images } = props
+  const styles = clsx(props.className,
+                      `mx-4 sm:mx-0 border border-1 border-border card bg-background relative p-1 rounded-2xl
                                         `)
 
   return (
     <article className={styles}>
-      <ProductPreview id={id} images={images} alt={name} />
-      <div className='card-body'>
-        <h2 className='card-title'>
-          <Balancer>
-            <TextWithLineBreaks>{name}</TextWithLineBreaks>
-          </Balancer>
-        </h2>
-        <Price price={price} currency={priceCurrency} />
-        <p>Stock disponible: {stock}</p>
-        <footer className='flex justify-center mt-6 card-actions'>
-          <Link
-            className='btn btn-primary'
-            to={`/${id}`}
-          >Ver detalle
-          </Link>
-        </footer>
-      </div>
+      <Link to={`/${id}`}>
+        <p className='absolute z-50 text-xs font-bold uppercase text-background badge badge-primary top-2 right-2'>
+          {category}
+        </p>
+        <ItemPreview className='' id={id} images={images} alt={name} />
+        <div className='p-4 pt-0 card-body'>
+          <h3>
+            <Balancer ratio={0.5}>
+              <TextWithLineBreaks onlyBreakFirstLine styled>{name}</TextWithLineBreaks>
+            </Balancer>
+          </h3>
+          <Price className='text-xl text-green-500 sm:text-base' price={price} currency={priceCurrency} />
+        </div>
+      </Link>
     </article>
   )
 }
