@@ -76,3 +76,20 @@ Los siguientes componentes tienen render condicional, dependiendo de si hay dato
 - `<ProductPreview />` muestra un banner de producto
 - `<ProductDescription />` muestra un párrafo de descripción
 - `<ProductSpecs />` muestra las especificaciones de producto
+
+## Para solucionar problema de react-router en Vercel
+
+Agregar en el `root` un archivo `vercel.json` con este contenido
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
+```
+
+Fuente: [https://github.com/vercel/vercel/issues/7475#issuecomment-1101659972](https://github.com/vercel/vercel/issues/7475#issuecomment-1101659972)
