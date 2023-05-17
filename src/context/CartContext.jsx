@@ -8,13 +8,19 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
   const addItemToCart = (item) => {
-    if (!isInCart(item.id)) {
-      setCart(prev => [...prev, item])
-    } else {
+    const updateItemQuantity = (item) => {
       const itemInCart = cart.find(i => i.id === item.id)
       itemInCart.quantity += item.quantity
       setCart(prev => prev.filter(i => i.id !== item.id).concat(itemInCart))
     }
+
+    const addItem = (item) => {
+      setCart(prev => [...prev, item])
+    }
+
+    isItemInCart(item.id)
+      ? updateItemQuantity(item)
+      : addItem(item)
   }
 
   const removeItemFromCart = (itemId) => {
@@ -25,7 +31,7 @@ export const CartProvider = ({ children }) => {
     setCart([])
   }
 
-  const isInCart = (id) => {
+  const isItemInCart = (id) => {
     return cart.some(item => item.id === id)
   }
 
@@ -44,6 +50,7 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={{
       cart,
+      isItemInCart,
       addItemToCart,
       removeItemFromCart,
       clearCart,
