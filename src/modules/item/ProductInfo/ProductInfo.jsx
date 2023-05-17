@@ -5,12 +5,12 @@ function ProductInfo ({ name, price, priceCurrency, stock }) {
   return (
     <>
       <h1
-        className='text-3xl font-bold card-title'
+        className='text-3xl font-bold text-center card-title sm:text-left'
       ><TextWithLineBreaks>{name}</TextWithLineBreaks>
       </h1>
       <div>
         Precio exclusivo:
-        <div className='ml-2 tooltip tooltip-right' data-tip='Transferencia, depósito o efectivo'>
+        <div className='ml-2 tooltip tooltip-left sm:tooltip-right' data-tip='Transferencia, depósito o efectivo'>
           <button className='badge badge-sm align-super text-bold'>i</button>
         </div>
         <Price
