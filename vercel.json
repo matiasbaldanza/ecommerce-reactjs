@@ -1,0 +1,9 @@
+{
+  "_comment": "https://github.com/vercel/vercel/issues/7475#issuecomment-1101659972",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
