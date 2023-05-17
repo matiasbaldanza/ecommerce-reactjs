@@ -28,7 +28,7 @@ function ItemListContainer ({ ...props }) {
 
   return (
     <div
-      className='container flex flex-col items-center w-full gap-4 mx-auto'
+      className='container flex flex-col items-center gap-4 mx-auto'
     >
       {props.children}
       {
