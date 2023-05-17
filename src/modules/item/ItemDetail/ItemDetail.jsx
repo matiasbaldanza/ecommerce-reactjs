@@ -1,3 +1,6 @@
+import { useState, useContext } from 'react'
+import { CartContext } from '@/context/CartContext'
+
 // Components
 import ProductTags from '../ProductTags'
 import ProductInfo from '../ProductInfo'
@@ -7,6 +10,19 @@ import ProductDescription from '../ProductDescription'
 import ProductSpecs from '../ProductSpecs'
 
 function ItemDetail ({ ...props }) {
+  const [quantityAddedToCart, setQuantityAddedToCart] = useState(0)
+  const { addItemToCart } = useContext(CartContext)
+
+  const handleOnAdd = (quantity) => {
+    setQuantityAddedToCart(quantity)
+
+    const item = {
+      id, name, price, quantity
+    }
+
+    addItemToCart(item)
+  }
+
   const {
     id, name, category, brand,
     stock, price, priceCurrency,
@@ -24,7 +40,7 @@ function ItemDetail ({ ...props }) {
             <ItemCount
               initial={1}
               stock={stock}
-              onAdd={(count) => console.log('Cantidad agregada ', count)}
+              onAdd={() => quantityAddedToCart > 0 && handleOnAdd(quantityAddedToCart)}
             />
           </div>
         </div>

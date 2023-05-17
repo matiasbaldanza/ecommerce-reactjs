@@ -11,6 +11,10 @@ import Header from '@/modules/layout/Header'
 import ItemListContainer from '@/modules/store/ItemListContainer'
 import ItemDetailContainer from '@/modules/item/ItemDetailContainer'
 import Footer from '@/modules/layout/Footer'
+import Cart from '@/modules/cart/Cart'
+
+// Providers
+import { CartProvider } from '@/context/CartContext'
 
 function App () {
   return (
@@ -24,13 +28,16 @@ function App () {
       }
       <div className='container flex flex-col gap-5 m-auto max-w-7xl'>
         <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path='/' element={<ItemListContainer />} />
-            <Route path='/category/:categoryId' element={<ItemListContainer />} />
-            <Route path='/:productId' element={<ItemDetailContainer />} />
-            <Route path='*' element={<h1>404 - NO ENCONTRADO</h1>} />
-          </Routes>
+          <CartProvider>
+            <Header />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
+              <Route path='/:productId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='*' element={<h1>404 - NO ENCONTRADO</h1>} />
+            </Routes>
+          </CartProvider>
         </BrowserRouter>
         <Footer />
         {/* TEST ItemListCointainer */}

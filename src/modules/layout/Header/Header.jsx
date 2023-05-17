@@ -26,7 +26,6 @@ function Header () {
           <CartWidget
             className={`fixed z-50 bg-brand text-background rounded-full shadow-lg bottom-4 right-4
                         sm:static sm:rounded-none sm:shadow-none sm:bottom-0 sm:right-0 sm:bg-background sm:text-foreground`}
-            cart={cart}
           />
         </div>
       </div>
