@@ -7,10 +7,18 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
-  const addItemToCart = (item) => {
-    const updateItemQuantity = (item) => {
+  const addItemToCart = (item, stock) => {
+    const updateItemQuantity = (item, stock) => {
       const itemInCart = cart.find(i => i.id === item.id)
-      itemInCart.quantity += item.quantity
+
+      itemInCart.quantity + item.quantity > stock
+        ? itemInCart.quantity = stock
+        : itemInCart.quantity += item.quantity
+
+      // Notificar al usuario que el carrito ya tiene el máximo de unidades disponibles
+      // TODO: agregar un toast
+      itemInCart.quantity === stock && console.log(`El carrito tiene el máximo de unidades disponibles: ${stock}`)
+
       setCart(prev => prev.filter(i => i.id !== item.id).concat(itemInCart))
     }
 
@@ -19,7 +27,7 @@ export const CartProvider = ({ children }) => {
     }
 
     isItemInCart(item.id)
-      ? updateItemQuantity(item)
+      ? updateItemQuantity(item, stock)
       : addItem(item)
   }
 

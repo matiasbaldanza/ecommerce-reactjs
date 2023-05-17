@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '@/context/CartContext'
 
 // Components
@@ -10,18 +10,19 @@ import ProductDescription from '../ProductDescription'
 import ProductSpecs from '../ProductSpecs'
 
 function ItemDetail ({ ...props }) {
-  const { addItemToCart } = useContext(CartContext)
-
-  const handleOnAdd = (quantity) => {
-    const item = { id, name, price, quantity }
-    addItemToCart(item)
-  }
-
   const {
     id, name, category, brand,
     stock, price, priceCurrency,
     images, banner, description, features
   } = { ...props }
+
+  const { addItemToCart } = useContext(CartContext)
+  const initialCount = 1
+
+  const handleOnAdd = (quantity) => {
+    const item = { id, name, price, quantity }
+    addItemToCart(item, stock)
+  }
 
   return (
     <article className='container flex flex-col gap-6'>
@@ -33,7 +34,7 @@ function ItemDetail ({ ...props }) {
           <div className='flex flex-col items-center w-full pt-0 sm:pt-10 sm:items-start'>
             {/* TODO: Agregar al carrito */}
             <ItemCount
-              initial={1}
+              initial={initialCount}
               stock={stock}
               onAdd={handleOnAdd}
             />
