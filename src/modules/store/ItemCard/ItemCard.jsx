@@ -16,7 +16,7 @@ function ItemCard ({ ...props }) {
   return (
     <article className={styles}>
       <Link to={`/${id}`}>
-        <p className='absolute z-50 text-xs font-bold uppercase text-background badge badge-primary top-2 right-2'>
+        <p className='absolute z-40 text-xs font-bold uppercase text-background badge badge-primary top-2 right-2'>
           {category}
         </p>
         <ItemPreview className='' id={id} images={images} alt={name} />
