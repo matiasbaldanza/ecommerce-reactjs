@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '@/context/CartContext'
 
 // Components
@@ -10,16 +10,10 @@ import ProductDescription from '../ProductDescription'
 import ProductSpecs from '../ProductSpecs'
 
 function ItemDetail ({ ...props }) {
-  const [quantityAddedToCart, setQuantityAddedToCart] = useState(0)
   const { addItemToCart } = useContext(CartContext)
 
   const handleOnAdd = (quantity) => {
-    setQuantityAddedToCart(quantity)
-
-    const item = {
-      id, name, price, quantity
-    }
-
+    const item = { id, name, price, quantity }
     addItemToCart(item)
   }
 
@@ -31,6 +25,7 @@ function ItemDetail ({ ...props }) {
 
   return (
     <article className='container flex flex-col gap-6'>
+      {/* Product header */}
       <header className='flex flex-col-reverse justify-between gap-6 mx-4 sm:flex-row-reverse'>
         <div className='flex flex-col items-center gap-4 text-xl sm:items-start basis-2/5'>
           <ProductTags {...{ brand, category }} />
@@ -40,14 +35,14 @@ function ItemDetail ({ ...props }) {
             <ItemCount
               initial={1}
               stock={stock}
-              onAdd={() => quantityAddedToCart > 0 && handleOnAdd(quantityAddedToCart)}
+              onAdd={handleOnAdd}
             />
           </div>
         </div>
-
         <ProductImage id={id} src={images[0]} alt={name} className='basis-3/5' />
-        {/* TODO: Carousel */}
       </header>
+
+      {/* Product Detail */}
       <main className='flex flex-col items-center gap-10 mx-4 card bg-base-100'>
         {
           banner && banner.length > 0 &&

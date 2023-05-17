@@ -7,11 +7,13 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
-  const addItemToCart = (item, quantity) => {
+  const addItemToCart = (item) => {
     if (!isInCart(item.id)) {
-      setCart(prev => [...prev, { ...item, quantity }])
+      setCart(prev => [...prev, item])
     } else {
-      console.error('El item ya está en el carrito')
+      const itemInCart = cart.find(i => i.id === item.id)
+      itemInCart.quantity += item.quantity
+      setCart(prev => prev.filter(i => i.id !== item.id).concat(itemInCart))
     }
   }
 

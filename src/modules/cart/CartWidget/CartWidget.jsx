@@ -9,8 +9,6 @@ function CartWidget ({ ...props }) {
   const styles = clsx('dropdown sm:dropdown-end dropdown-start',
     props.className)
 
-  console.log('Items in cart', cartQuantity())
-
   return (
     <div className={styles}>
 

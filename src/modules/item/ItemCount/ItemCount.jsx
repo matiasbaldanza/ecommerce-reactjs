@@ -3,14 +3,14 @@ import clsx from 'clsx'
 import { removeNumberInputControls } from '@/styles/styleUtils'
 
 function ItemCount ({ initial, stock, onAdd }) {
-  const [count, setCount] = useState(initial)
+  const [quantity, setQuantity] = useState(initial)
 
   const increment = () => {
-    if (count < stock) setCount(prevCount => prevCount + 1)
+    if (quantity < stock) setQuantity(prevCount => prevCount + 1)
   }
 
   const decrement = () => {
-    if (count > 1) setCount(prevCount => prevCount - 1)
+    if (quantity > 1) setQuantity(prevCount => prevCount - 1)
   }
 
   return (
@@ -26,7 +26,7 @@ function ItemCount ({ initial, stock, onAdd }) {
         max={stock}
         step={1}
         className={clsx('w-full px-12 text-center input input-bordered arrow-hide', removeNumberInputControls)}
-        value={count}
+        value={quantity}
         readOnly
       />
       <button
@@ -36,7 +36,7 @@ function ItemCount ({ initial, stock, onAdd }) {
       </button>
       <button
         className='w-full mt-2 btn btn-md btn-primary'
-        onClick={() => onAdd(count)}
+        onClick={() => onAdd(quantity)}
         disabled={!stock}
       >
         Agregar
