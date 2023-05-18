@@ -12,6 +12,7 @@ const products = [
     stock: 10,
     price: 1_275_890,
     priceCurrency: 'ARS',
+    enabled: false,
     images: [
       '01-600x600.jpg',
       '02-600x600.jpg',
@@ -112,9 +113,10 @@ const products = [
     RTX 3070 8GB`,
     category: 'gamer',
     brand: 'Alienware',
-    stock: 5,
+    stock: 1,
     price: 989_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01-600x600.jpg',
       '02-600x600.jpg',
@@ -216,6 +218,7 @@ const products = [
     stock: 5,
     price: 449_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01-600x600.jpg',
       '02-600x600.jpg',
@@ -316,6 +319,7 @@ const products = [
     stock: 12,
     price: 284_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01-600x600.jpg',
       '02-600x600.jpg',
@@ -413,6 +417,7 @@ const products = [
     stock: 9,
     price: 389_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01.jpg',
       '02.jpg',
@@ -513,6 +518,7 @@ const products = [
     stock: 9,
     price: 279_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01.jpg',
       '02.jpg',
@@ -608,9 +614,10 @@ const products = [
     Negro`,
     category: 'gadgets',
     brand: 'Kindle',
-    stock: 7,
+    stock: 1,
     price: 81_890,
     priceCurrency: 'ARS',
+    enabled: true,
     images: [
       '01.jpg',
       '02.jpg',

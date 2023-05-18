@@ -12,7 +12,7 @@ import ProductSpecs from '../ProductSpecs'
 function ItemDetail ({ ...props }) {
   const {
     id, name, category, brand,
-    stock, price, priceCurrency,
+    stock, price, priceCurrency, enabled,
     images, banner, description, features
   } = { ...props }
 
@@ -33,11 +33,13 @@ function ItemDetail ({ ...props }) {
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
           <div className='flex flex-col items-center w-full pt-0 sm:pt-10 sm:items-start'>
             {/* TODO: Agregar al carrito */}
-            <ItemCount
-              initial={initialCount}
-              stock={stock}
-              onAdd={handleOnAdd}
-            />
+            {enabled
+              ? <ItemCount
+                  initial={initialCount}
+                  stock={stock}
+                  onAdd={handleOnAdd}
+                />
+              : <p className='text-2xl font-bold text-center text-gray-500'>Producto no disponible</p>}
           </div>
         </div>
         <ProductImage id={id} src={images[0]} alt={name} className='basis-3/5' />
