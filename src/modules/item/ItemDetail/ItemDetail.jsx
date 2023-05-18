@@ -33,7 +33,7 @@ function ItemDetail ({ ...props }) {
           <ProductInfo {...{ name, price, priceCurrency, stock }} />
           <div className='flex flex-col items-center w-full pt-0 sm:pt-10 sm:items-start'>
             {/* TODO: Agregar al carrito */}
-            {enabled
+            {enabled && stock > 0
               ? <ItemCount
                   initial={initialCount}
                   stock={stock}
