@@ -7,6 +7,8 @@ export const PUBLIC_IMG_PATH = {
   images: '/images'
 }
 
+export const LOAD_CART_MOCK = true
+
 export const SOCIAL_ACCOUNTS = [
   {
     name: 'Instagram',

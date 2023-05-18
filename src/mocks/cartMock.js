@@ -1,4 +1,4 @@
-export const cart = [
+export const cartMock = [
   {
     id: 'asus-vivobook-pro-14-oled-core-i5-11300h-8gb-256gb',
     name: 'Asus Vivobook Pro \n    14 Oled \n    Core i5 11300H \n    8GB / 256GB',

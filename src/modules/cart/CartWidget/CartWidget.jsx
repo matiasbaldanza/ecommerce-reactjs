@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CartContext } from '@/context/CartContext'
 import { Link } from 'react-router-dom'
 
@@ -8,9 +8,16 @@ import clsx from 'clsx'
 // Componentes
 import Price from '@/modules/item/Price'
 
+// Mock cart
+import useCartMock from '@/mocks/useCartMock'
+import { LOAD_CART_MOCK } from '@/utils/globalConstants'
+
 function CartWidget ({ ...props }) {
   const { cartQuantity, cartTotalAmount } = useContext(CartContext)
   const quantity = cartQuantity()
+
+  // Mock cart
+  useCartMock(LOAD_CART_MOCK)
 
   return (
     <div className={clsx('dropdown sm:dropdown-end dropdown-start', props.className)}>
