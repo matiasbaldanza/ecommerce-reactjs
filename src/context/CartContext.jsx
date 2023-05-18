@@ -17,7 +17,8 @@ export const CartProvider = ({ children }) => {
 
       // Notificar al usuario que el carrito ya tiene el máximo de unidades disponibles
       // TODO: agregar un toast
-      itemInCart.quantity === stock && console.log(`El carrito tiene el máximo de unidades disponibles: ${stock}`)
+      itemInCart.quantity === stock &&
+        console.log(`El carrito tiene el máximo de unidades disponibles: ${stock}`)
 
       setCart(prev => prev.filter(i => i.id !== item.id).concat(itemInCart))
     }
