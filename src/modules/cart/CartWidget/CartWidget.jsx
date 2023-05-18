@@ -1,37 +1,53 @@
 import { useContext } from 'react'
 import { CartContext } from '@/context/CartContext'
+import { Link } from 'react-router-dom'
 
 import { pluralize } from '../../../utils/textUtils'
 import clsx from 'clsx'
 
+// Componentes
+import Price from '@/modules/item/Price'
+
 function CartWidget ({ ...props }) {
-  const { cartQuantity } = useContext(CartContext)
-  const styles = clsx('dropdown sm:dropdown-end dropdown-start',
-    props.className)
+  const { cartQuantity, cartTotalAmount } = useContext(CartContext)
+  const quantity = cartQuantity()
 
   return (
-    <div className={styles}>
+    <div className={clsx('dropdown sm:dropdown-end dropdown-start', props.className)}>
 
       {/* Badge */}
       <label tabIndex={0} className='btn btn-ghost btn-circle'>
         <div className='indicator'>
           <CartIcon />
-          {cartQuantity() > 0 &&
-            <CartBadge>{cartQuantity()}</CartBadge>}
+          {quantity > 0 && <CartBadge>{quantity}</CartBadge>}
         </div>
       </label>
 
       {/* Cart badge menu */}
-      {/* <div tabIndex={0} className='mt-3 shadow card card-compact dropdown-content w-52 bg-base-100'>
-        <div className='card-body'>
-          <span className='text-lg font-bold'>{pluralize(cantItems, 'artículo')}</span>
-          <span className='text-info'>Subtotal: $ {subTotal}</span>
-          <div className='card-actions'>
-            <button className='btn btn-primary btn-block'>Ver carrito</button>
-          </div>
+      <div tabIndex={0} className='mt-3 shadow card card-compact dropdown-content w-52 bg-base-100'>
+        <div className='text-center card-body'>
+          {quantity === 0
+            ? <span className='text-lg font-bold'>El carrito está vacío</span>
+            : (
+              <>
+                <span className='text-lg font-bold'>{pluralize(quantity, 'artículo')}</span>
+                <span className='text-lg text-info'>
+                  <Price price={cartTotalAmount()} currency='ARS' />
+                </span>
+                <div className='card-actions'>
+                  <Link
+                    to='/cart'
+                    className='btn btn-primary btn-block'
+                  >Ver carrito
+                  </Link>
+                </div>
+              </>
+              )}
         </div>
-      </div> */}
+      </div>
+
     </div>
+
   )
 }
 
