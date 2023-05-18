@@ -1,16 +1,17 @@
 import { useContext } from 'react'
 import { CartContext } from '@/context/CartContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Price from '../../item/Price'
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
+  const navigate = useNavigate()
 
   if (cartQuantity() === 0) {
     return (
       <div className='flex flex-col items-center justify-center h-screen'>
         <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
-        <Link to='/'>Volver</Link>
+        <button onClick={() => navigate(-1)}>Volver</button>
       </div>
     )
   }
