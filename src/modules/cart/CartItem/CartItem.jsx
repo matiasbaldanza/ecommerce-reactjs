@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { CartContext } from '@/context/CartContext'
+import { Link } from 'react-router-dom'
 
 // Notificaciones
 import toast from 'react-hot-toast'
@@ -33,7 +34,12 @@ function CartItem ({ id, ...props }) {
         </button>
       </td>
       <td className='text-lg'>
-        <TextWithLineBreaks onlyBreakFirstLine styled>{name}</TextWithLineBreaks>
+        <Link
+          to={`/${id}`}
+          title='Ver detalle'
+        >
+          <TextWithLineBreaks onlyBreakFirstLine styled>{name}</TextWithLineBreaks>
+        </Link>
       </td>
       <td className='text-lg text-center'>
         {quantity}
