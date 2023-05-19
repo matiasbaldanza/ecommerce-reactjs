@@ -16,9 +16,13 @@ import Cart from '@/modules/cart/Cart'
 // Providers
 import { CartProvider } from '@/context/CartContext'
 
+// react-hot-toast
+import { Toaster } from 'react-hot-toast'
+
 function App () {
   return (
     <div>
+      <Toaster position='bottom-center' />
       {
         ANNOUNCEMENT.active &&
           <AnnouncementBar style={ANNOUNCEMENT.style.secondary}>
