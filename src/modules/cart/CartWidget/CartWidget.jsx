@@ -20,7 +20,7 @@ function CartWidget ({ ...props }) {
   useCartMock(LOAD_CART_MOCK)
 
   return (
-    <div className={clsx('dropdown sm:dropdown-end dropdown-start', props.className)}>
+    <div className={clsx('dropdown', props.className)}>
 
       {/* Badge */}
       <label tabIndex={0} className='btn btn-ghost btn-circle'>
