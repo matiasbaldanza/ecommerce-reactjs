@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom'
 
 import { pluralize } from '../../../utils/textUtils'
 import clsx from 'clsx'
+import toast from 'react-hot-toast'
 
 // Componentes
 import Price from '@/modules/item/Price'
+import IconButton from '@/modules/ui/IconButton'
+import IconCross from '@/modules/ui/Icons/IconCross'
 
 // Mock cart
 import useCartMock from '@/mocks/useCartMock'
 import { LOAD_CART_MOCK } from '@/utils/globalConstants'
 
 function CartWidget ({ ...props }) {
-  const { cartQuantity, cartTotalAmount } = useContext(CartContext)
+  const { cartQuantity, cartTotalAmount, clearCart } = useContext(CartContext)
   const quantity = cartQuantity()
 
   // Mock cart
@@ -42,6 +45,16 @@ function CartWidget ({ ...props }) {
                   <Price price={cartTotalAmount()} currency='ARS' />
                 </span>
                 <div className='card-actions'>
+                  <IconButton
+                    className='mt-0 btn-error btn-outline'
+                    icon={<IconCross />}
+                    onClick={() => {
+                      clearCart()
+                      toast.success(<p>Carrito eliminado.</p>)
+                    }}
+                  >
+                    Limpiar carrito
+                  </IconButton>
                   <Link
                     to='/cart'
                     className='btn btn-primary btn-block'
