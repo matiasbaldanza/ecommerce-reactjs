@@ -10,6 +10,7 @@ import toast from 'react-hot-toast'
 import Price from '@/modules/item/Price'
 import IconButton from '@/modules/ui/IconButton'
 import IconCross from '@/modules/ui/Icons/IconCross'
+import Badge from '@/modules/ui/Badge/Badge'
 
 // Mock cart
 import useCartMock from '@/mocks/useCartMock'
@@ -29,7 +30,7 @@ function CartWidget ({ ...props }) {
       <label tabIndex={0} className='btn btn-ghost btn-circle'>
         <div className='indicator'>
           <CartIcon />
-          {quantity > 0 && <CartBadge>{quantity}</CartBadge>}
+          {quantity > 0 && <Badge>{quantity}</Badge>}
         </div>
       </label>
 
@@ -74,17 +75,6 @@ function CartWidget ({ ...props }) {
 function CartIcon () {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' className='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z' /></svg>
-  )
-}
-
-function CartBadge ({ children }) {
-  return (
-    <span
-      className={`font-extrabold border-0 text-brand bg-background badge badge-sm indicator-item
-                  sm:text-background sm:bg-foreground`}
-    >
-      {children}
-    </span>
   )
 }
 
