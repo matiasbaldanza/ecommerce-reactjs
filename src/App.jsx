@@ -34,13 +34,15 @@ function App () {
         <BrowserRouter>
           <CartProvider>
             <Header />
-            <Routes>
-              <Route path='/' element={<ItemListContainer />} />
-              <Route path='/category/:categoryId' element={<ItemListContainer />} />
-              <Route path='/:productId' element={<ItemDetailContainer />} />
-              <Route path='/cart' element={<Cart />} />
-              <Route path='*' element={<h1>404 - NO ENCONTRADO</h1>} />
-            </Routes>
+            <div className='h-screen'>
+              <Routes>
+                <Route path='/' element={<ItemListContainer />} />
+                <Route path='/category/:categoryId' element={<ItemListContainer />} />
+                <Route path='/:productId' element={<ItemDetailContainer />} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='*' element={<h1 className='flex-1'>404 - NO ENCONTRADO</h1>} />
+              </Routes>
+            </div>
           </CartProvider>
         </BrowserRouter>
         <Footer />
