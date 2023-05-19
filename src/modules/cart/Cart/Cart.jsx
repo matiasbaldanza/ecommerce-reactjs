@@ -10,6 +10,7 @@ import CartItem from '../CartItem/CartItem'
 import Price from '../../item/Price'
 import IconCross from '@/modules/ui/Icons/IconCross'
 import IconBack from '@/modules/ui/Icons/IconBack'
+import IconButton from '@/modules/ui/IconButton'
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
@@ -21,13 +22,13 @@ function Cart () {
         cartQuantity() === 0 &&
           <div className='flex flex-col items-center justify-center h-96'>
             <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
-            <button
-              className='flex gap-4 mt-4 btn btn-primary btn-md'
+            <IconButton
+              className='btn-primary btn-md'
+              icon={<IconBack />}
               onClick={() => navigate(-1)}
             >
-              <IconBack />
               Volver
-            </button>
+            </IconButton>
           </div>
       }
       {
@@ -55,15 +56,16 @@ function Cart () {
                 </tr>
               </tfoot>
             </table>
-            <button
-              className='flex gap-4 btn btn-error btn-outline' onClick={() => {
+            <IconButton
+              className='btn-error btn-outline'
+              icon={<IconCross />}
+              onClick={() => {
                 clearCart()
                 toast.success(<p>Carrito eliminado.</p>)
               }}
             >
-              <IconCross />
               Limpiar carrito
-            </button>
+            </IconButton>
             <Link className='btn btn-primary' to='/checkout'>Finalizar compra</Link>
           </>
     }
