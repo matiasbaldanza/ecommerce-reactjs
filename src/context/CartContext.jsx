@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import toast from 'react-hot-toast'
 
 export const CartContext = createContext({
   cart: []
@@ -10,15 +11,21 @@ export const CartProvider = ({ children }) => {
   const addItemToCart = (item, stock) => {
     const updateItemQuantity = (item, stock) => {
       const itemInCart = cart.find(i => i.id === item.id)
+      const existingQuantity = itemInCart.quantity
 
       itemInCart.quantity + item.quantity > stock
         ? itemInCart.quantity = stock
         : itemInCart.quantity += item.quantity
 
       // Notificar al usuario que el carrito ya tiene el máximo de unidades disponibles
-      // TODO: agregar un toast
-      itemInCart.quantity === stock &&
-        console.log(`El carrito tiene el máximo de unidades disponibles: ${stock}`)
+      itemInCart.quantity === stock && itemInCart.quantity === existingQuantity &&
+        toast.error(
+          <p>
+            El carrito tiene el máximo de unidades disponibles de este artículo:
+            <span className='font-bold'> {stock}</span><br />
+            Se agregaron <span className='font-bold'>{itemInCart.quantity - existingQuantity}</span> unidades.
+          </p>
+        )
 
       setCart(prev => prev.filter(i => i.id !== item.id).concat(itemInCart))
     }
@@ -53,8 +60,6 @@ export const CartProvider = ({ children }) => {
     const totalAmount = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
     return totalAmount
   }
-
-  console.log(cart)
 
   return (
     <CartContext.Provider value={{

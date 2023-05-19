@@ -20,7 +20,8 @@ Repo: https://github.com/matiasbaldanza/ecommerce-reactjs
 
 - [React.js](https://react.dev/)
 - Estilos: [TailwindCSS 3.3.1](https://tailwindcss.com/docs/installation)
-- Componentes UI: [DaisyUI](https://daisyui.com/docs/install/)
+- Componentes UI: [DaisyUI](https://daisyui.com/docs/install/) (usados como base en componentes personalizados)
+- Noficicaciones: [react-hot-toast](https://react-hot-toast.com/)
 - Base de datos: [Firebase](https://firebase.google.com/)
 - Build tool: [Vite](https://vitejs.dev/)
 - Linter: [StandardJS (ESLint)](https://standardjs.com/)
