@@ -9,6 +9,7 @@ import toast from 'react-hot-toast'
 import CartItem from '../CartItem/CartItem'
 import Price from '../../item/Price'
 import IconCross from '@/modules/ui/Icons/IconCross'
+import IconBack from '@/modules/ui/Icons/IconBack'
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
@@ -20,7 +21,13 @@ function Cart () {
         cartQuantity() === 0 &&
           <div className='flex flex-col items-center justify-center h-96'>
             <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
-            <button onClick={() => navigate(-1)}>Volver</button>
+            <button
+              className='flex gap-4 mt-4 btn btn-primary btn-md'
+              onClick={() => navigate(-1)}
+            >
+              <IconBack />
+              Volver
+            </button>
           </div>
       }
       {
