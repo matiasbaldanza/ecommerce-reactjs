@@ -16,6 +16,8 @@ function CartItem ({ id, ...props }) {
 
   return (
     <tr>
+
+      {/* Botón eliminar del carrito */}
       <td>
         <button
           className='btn btn-circle btn-outline btn-error btn-sm'
@@ -33,6 +35,8 @@ function CartItem ({ id, ...props }) {
           <IconCross />
         </button>
       </td>
+
+      {/* Item */}
       <td className='text-lg'>
         <Link
           to={`/${id}`}
@@ -44,8 +48,16 @@ function CartItem ({ id, ...props }) {
       <td className='text-lg text-center'>
         {quantity}
       </td>
+
+      {/* Subtotal */}
       <td className='text-xl text-right'>
-        <Price price={price} currency='ARS' />
+        {/* Precio unitario, si más de una unidad */
+          quantity > 1 &&
+            <p className='text-sm font-normal text-right text-gray-600'>
+              Unidad: <Price className='inline-block font-normal' price={price} currency='ARS' />
+            </p>
+        }
+        <Price price={price * quantity} currency='ARS' />
       </td>
     </tr>
   )

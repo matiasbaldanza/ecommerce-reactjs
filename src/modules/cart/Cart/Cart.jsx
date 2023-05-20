@@ -41,7 +41,7 @@ function Cart () {
                   <th />
                   <th>Producto</th>
                   <th>Cant.</th>
-                  <th>Precio</th>
+                  <th>Subtotal</th>
                 </tr>
               </thead>
               <tbody>
@@ -56,6 +56,8 @@ function Cart () {
                 </tr>
               </tfoot>
             </table>
+
+            {/* Footer del carrito con botones de acción */}
             <IconButton
               className='btn-error btn-outline'
               icon={<IconCross />}
