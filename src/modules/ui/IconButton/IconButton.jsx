@@ -5,7 +5,7 @@ function IconButton ({ icon, onClick, ...props }) {
   return (
     <button
       {...props}
-      className={clsx('flex gap-4 mt-4 btn', props.className)}
+      className={clsx('flex gap-4 btn', props.className)}
       onClick={onClick}
     >
       {icon}
