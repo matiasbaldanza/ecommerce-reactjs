@@ -24,7 +24,7 @@ function CartWidget ({ ...props }) {
   useCartMock(LOAD_CART_MOCK)
 
   return (
-    <div className={clsx('dropdown', props.className)}>
+    <div className={clsx('dropdown dropdown-end', props.className)}>
 
       {/* Badge */}
       <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -35,7 +35,7 @@ function CartWidget ({ ...props }) {
       </label>
 
       {/* Cart badge menu */}
-      <div tabIndex={0} className='mt-3 shadow card card-compact dropdown-content w-52 bg-base-100'>
+      <div tabIndex={0} className='mt-3 shadow card card-compact dropdown-content w-60 bg-base-100'>
         <div className='text-center card-body'>
           {quantity === 0
             ? <span className='text-lg font-bold'>El carrito está vacío</span>
@@ -47,7 +47,7 @@ function CartWidget ({ ...props }) {
                 </span>
                 <div className='card-actions'>
                   <IconButton
-                    className='mt-0 btn-error btn-outline'
+                    className='w-full mt-0 btn-error btn-outline'
                     icon={<IconCross />}
                     onClick={() => {
                       clearCart()
