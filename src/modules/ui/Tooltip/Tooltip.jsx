@@ -7,7 +7,6 @@ function Tooltip ({ text, children, ...props }) {
     <div
       data-tip={text}
       className={styles}
-      // {...props}
     >
       {children}
     </div>
