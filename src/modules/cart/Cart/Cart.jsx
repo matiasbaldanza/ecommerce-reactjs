@@ -12,6 +12,12 @@ import CrossIcon from '@/modules/ui/Icons/CrossIcon'
 import BackIcon from '@/modules/ui/Icons/BackIcon'
 import IconButton from '@/modules/ui/IconButton'
 import CartIcon from '@/modules/ui/Icons/CartIcon'
+import CartBreadcrumbs from '@/modules/cart/CartBreadcrumbs'
+
+// Constantes
+import { cartSteps } from '@/utils/globalConstants'
+const CURRENT_CART_STEP = 0
+const NEXT_CART_STEP = 1
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
@@ -19,6 +25,7 @@ function Cart () {
 
   return (
     <div className='flex flex-col items-center w-full gap-4 px-4'>
+      <CartBreadcrumbs steps={cartSteps} currentStep={CURRENT_CART_STEP} />
       {
         cartQuantity() === 0 &&
           <div className='flex flex-col items-center justify-center h-96'>
@@ -59,16 +66,16 @@ function Cart () {
             </table>
 
             {/* Acciones del carrito */}
-            <div className='flex flex-col justify-between w-full max-w-4xl gap-2 sm:flex-row'>
+            <div className='flex flex-col justify-between w-full gap-2 sm:max-w-4xl sm:flex-row'>
               <IconButton
-                className='mr-auto btn-primary btn-outline btn-md'
+                className='mb-8 sm:mr-auto btn-primary btn-outline btn-sm sm:btn-md sm:mb-0'
                 icon={<BackIcon />}
               >
                 <Link to='/'>Seguir comprando</Link>
               </IconButton>
 
               <IconButton
-                className='btn-error btn-outline'
+                className='btn-error btn-outline btn-sm sm:btn-md'
                 icon={<CrossIcon />}
                 onClick={() => {
                   clearCart()
@@ -77,11 +84,12 @@ function Cart () {
               >
                 Limpiar carrito
               </IconButton>
+
               <IconButton
-                className='btn-primary'
+                className='btn-primary btn-sm sm:btn-md'
                 icon={<CartIcon />}
               >
-                <Link to='/checkout'>Finalizar compra</Link>
+                <Link to={cartSteps[NEXT_CART_STEP].path}>{cartSteps[NEXT_CART_STEP].label}</Link>
               </IconButton>
             </div>
           </>

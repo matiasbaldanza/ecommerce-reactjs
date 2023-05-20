@@ -9,6 +9,12 @@ export const PUBLIC_IMG_PATH = {
 
 export const LOAD_CART_MOCK = false
 
+export const cartSteps = [
+  { path: '/cart', label: 'Carrito' },
+  { path: '/checkout', label: 'Detalles del pago' },
+  { path: '/success', label: 'Pedido completado' }
+]
+
 export const SOCIAL_ACCOUNTS = [
   {
     name: 'Instagram',
