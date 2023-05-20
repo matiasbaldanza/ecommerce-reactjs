@@ -11,6 +11,7 @@ import Price from '../../item/Price'
 import CrossIcon from '@/modules/ui/Icons/CrossIcon'
 import BackIcon from '@/modules/ui/Icons/BackIcon'
 import IconButton from '@/modules/ui/IconButton'
+import CartIcon from '@/modules/ui/Icons/CartIcon'
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
@@ -23,7 +24,7 @@ function Cart () {
           <div className='flex flex-col items-center justify-center h-96'>
             <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
             <IconButton
-              className='btn-primary btn-md'
+              className='mt-4 btn-primary btn-md'
               icon={<BackIcon />}
               onClick={() => navigate(-1)}
             >
@@ -57,18 +58,25 @@ function Cart () {
               </tfoot>
             </table>
 
-            {/* Footer del carrito con botones de acción */}
-            <IconButton
-              className='btn-error btn-outline'
-              icon={<CrossIcon />}
-              onClick={() => {
-                clearCart()
-                toast.success(<p>Carrito eliminado.</p>)
-              }}
-            >
-              Limpiar carrito
-            </IconButton>
-            <Link className='btn btn-primary' to='/checkout'>Finalizar compra</Link>
+            {/* Acciones del carrito */}
+            <div className='flex flex-col gap-2 sm:flex-row'>
+              <IconButton
+                className='btn-error btn-outline'
+                icon={<CrossIcon />}
+                onClick={() => {
+                  clearCart()
+                  toast.success(<p>Carrito eliminado.</p>)
+                }}
+              >
+                Limpiar carrito
+              </IconButton>
+              <IconButton
+                className='btn-primary'
+                icon={<CartIcon />}
+              >
+                <Link to='/checkout'>Finalizar compra</Link>
+              </IconButton>
+            </div>
           </>
     }
 
