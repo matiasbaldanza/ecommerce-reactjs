@@ -22,7 +22,12 @@ import { Toaster } from 'react-hot-toast'
 function App () {
   return (
     <div>
-      <Toaster position='bottom-center' />
+      <Toaster
+        position='bottom-center'
+        toastOptions={{
+          duration: 2000
+        }}
+      />
       {
         ANNOUNCEMENT.active &&
           <AnnouncementBar style={ANNOUNCEMENT.style.secondary}>
