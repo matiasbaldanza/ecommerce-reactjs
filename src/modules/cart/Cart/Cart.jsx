@@ -59,7 +59,14 @@ function Cart () {
             </table>
 
             {/* Acciones del carrito */}
-            <div className='flex flex-col gap-2 sm:flex-row'>
+            <div className='flex flex-col justify-between w-full max-w-4xl gap-2 sm:flex-row'>
+              <IconButton
+                className='mr-auto btn-primary btn-outline btn-md'
+                icon={<BackIcon />}
+              >
+                <Link to='/'>Seguir comprando</Link>
+              </IconButton>
+
               <IconButton
                 className='btn-error btn-outline'
                 icon={<CrossIcon />}
