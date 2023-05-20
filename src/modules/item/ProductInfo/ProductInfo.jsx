@@ -15,9 +15,7 @@ function ProductInfo ({ name, price, priceCurrency, stock }) {
         <Tooltip className='tooltip-top sm:tooltip-right' text='Transferencia, depósito o efectivo'>
           <button className='badge badge-sm align-super text-bold'>i</button>
         </Tooltip>
-        <Price
-          className='text-2xl text-info ' price={price} currency={priceCurrency}
-        />
+        <p><Price className='text-2xl text-info ' price={price} currency={priceCurrency} /></p>
       </div>
       <p>Stock disponible: {stock}</p>
       <div className='gap-2 p-4 badge badge-xl badge-success'>

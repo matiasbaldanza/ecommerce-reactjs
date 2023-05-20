@@ -42,9 +42,7 @@ function CartWidget ({ ...props }) {
             : (
               <>
                 <span className='text-lg font-bold'>{pluralize(quantity, 'artículo')}</span>
-                <span className='text-lg text-info'>
-                  <Price price={cartTotalAmount()} currency='ARS' />
-                </span>
+                <Price className='text-lg text-info' price={cartTotalAmount()} currency='ARS' />
                 <div className='card-actions'>
                   <IconButton
                     className='w-full mt-0 btn-error btn-outline'
