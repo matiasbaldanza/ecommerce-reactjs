@@ -1,5 +1,7 @@
+// Componentes
 import TextWithLineBreaks from '../TextWithLineBreaks/TextWithLineBreaks'
 import Price from '../Price/Price'
+import Tooltip from '@/modules/ui/Tooltip/Tooltip'
 
 function ProductInfo ({ name, price, priceCurrency, stock }) {
   return (
@@ -10,11 +12,11 @@ function ProductInfo ({ name, price, priceCurrency, stock }) {
       </h1>
       <div>
         Precio exclusivo:
-        <div className='ml-2 tooltip tooltip-left sm:tooltip-right' data-tip='Transferencia, depósito o efectivo'>
+        <Tooltip className='tooltip-top sm:tooltip-right' text='Transferencia, depósito o efectivo'>
           <button className='badge badge-sm align-super text-bold'>i</button>
-        </div>
+        </Tooltip>
         <Price
-          className='text-xl text-info ' price={price} currency={priceCurrency}
+          className='text-2xl text-info ' price={price} currency={priceCurrency}
         />
       </div>
       <p>Stock disponible: {stock}</p>
