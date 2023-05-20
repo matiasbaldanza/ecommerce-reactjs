@@ -21,26 +21,15 @@ const NEXT_CART_STEP = 1
 
 function Cart () {
   const { cart, clearCart, cartQuantity, cartTotalAmount } = useContext(CartContext)
-  const navigate = useNavigate()
+  const quantity = cartQuantity()
+  const isCartEmpty = quantity === 0
 
   return (
     <div className='flex flex-col items-center w-full gap-4 px-4'>
       <CartBreadcrumbs steps={cartSteps} currentStep={CURRENT_CART_STEP} />
+      {isCartEmpty && showEmptyCartNotice()}
       {
-        cartQuantity() === 0 &&
-          <div className='flex flex-col items-center justify-center h-96'>
-            <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
-            <IconButton
-              className='mt-4 btn-primary btn-md'
-              icon={<BackIcon />}
-              onClick={() => navigate(-1)}
-            >
-              Volver
-            </IconButton>
-          </div>
-      }
-      {
-        cartQuantity() > 0 &&
+        quantity > 0 &&
           <>
             <table className='table w-full max-w-4xl table-zebra'>
               {/* head */}
@@ -95,6 +84,21 @@ function Cart () {
           </>
     }
 
+    </div>
+  )
+}
+
+const showEmptyCartNotice = () => {
+  return (
+    <div className='flex flex-col items-center justify-center h-96'>
+      <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
+      <IconButton
+        className='mt-4 btn-primary btn-md'
+        icon={<BackIcon />}
+        onClick={() => navigate(-1)}
+      >
+        Volver
+      </IconButton>
     </div>
   )
 }
