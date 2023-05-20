@@ -8,8 +8,8 @@ import toast from 'react-hot-toast'
 // Componentes
 import CartItem from '../CartItem/CartItem'
 import Price from '../../item/Price'
-import IconCross from '@/modules/ui/Icons/IconCross'
-import IconBack from '@/modules/ui/Icons/IconBack'
+import CrossIcon from '@/modules/ui/Icons/CrossIcon'
+import BackIcon from '@/modules/ui/Icons/BackIcon'
 import IconButton from '@/modules/ui/IconButton'
 
 function Cart () {
@@ -24,7 +24,7 @@ function Cart () {
             <h1 className='text-4xl font-bold'>El carrito está vacío</h1>
             <IconButton
               className='btn-primary btn-md'
-              icon={<IconBack />}
+              icon={<BackIcon />}
               onClick={() => navigate(-1)}
             >
               Volver
@@ -60,7 +60,7 @@ function Cart () {
             {/* Footer del carrito con botones de acción */}
             <IconButton
               className='btn-error btn-outline'
-              icon={<IconCross />}
+              icon={<CrossIcon />}
               onClick={() => {
                 clearCart()
                 toast.success(<p>Carrito eliminado.</p>)

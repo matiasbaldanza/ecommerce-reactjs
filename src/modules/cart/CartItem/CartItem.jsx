@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 // Componentes
 import Price from '@/modules/item/Price'
 import TextWithLineBreaks from '@/modules/item/TextWithLineBreaks'
-import IconCross from '@/modules/ui/Icons/IconCross'
+import CrossIcon from '@/modules/ui/Icons/CrossIcon'
 
 function CartItem ({ id, ...props }) {
   const { name, price, quantity } = props
@@ -32,7 +32,7 @@ function CartItem ({ id, ...props }) {
             )
           }}
         >
-          <IconCross />
+          <CrossIcon />
         </button>
       </td>
 

@@ -9,7 +9,7 @@ import toast from 'react-hot-toast'
 // Componentes
 import Price from '@/modules/item/Price'
 import IconButton from '@/modules/ui/IconButton'
-import IconCross from '@/modules/ui/Icons/IconCross'
+import CrossIcon from '@/modules/ui/Icons/CrossIcon'
 import Badge from '@/modules/ui/Badge/Badge'
 
 // Mock cart
@@ -46,7 +46,7 @@ function CartWidget ({ ...props }) {
                 <div className='card-actions'>
                   <IconButton
                     className='w-full mt-0 btn-error btn-outline'
-                    icon={<IconCross />}
+                    icon={<CrossIcon />}
                     onClick={() => {
                       clearCart()
                       toast.success(<p>Carrito eliminado.</p>)

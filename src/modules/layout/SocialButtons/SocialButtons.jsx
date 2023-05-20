@@ -1,5 +1,5 @@
-import IconWhatsApp from '../../ui/Icons/IconWhatsApp'
-import IconInstagram from '../../ui/Icons/IconInstagram'
+import WhatsAppIcon from '../../ui/Icons/WhatsAppIcon'
+import InstagramIcon from '../../ui/Icons/InstagramIcon'
 import { SOCIAL_ACCOUNTS } from '../../../utils/globalConstants'
 
 function SocialButtons () {
@@ -17,8 +17,8 @@ function SocialButtons () {
             rel='noreferrer'
             className='flex items-center justify-center w-10 h-10 text-white rounded-full cursor-pointer bg-brand'
           >
-            {account.name === 'Instagram' && <IconInstagram />}
-            {account.name === 'WhatsApp' && <IconWhatsApp />}
+            {account.name === 'Instagram' && <InstagramIcon />}
+            {account.name === 'WhatsApp' && <WhatsAppIcon />}
           </a>
         )
       })

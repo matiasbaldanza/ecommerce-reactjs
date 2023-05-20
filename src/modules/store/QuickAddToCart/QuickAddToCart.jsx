@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import IconShoppingBag from '@/modules/ui/Icons/IconShoppingBag'
+import ShoppingBagIcon from '@/modules/ui/Icons/ShoppingBagIcon'
 import Tooltip from '@/modules/ui/Tooltip'
 
 function QuickAddToCart (props) {
@@ -10,7 +10,7 @@ function QuickAddToCart (props) {
         className={clsx('btn', props.className)}
         {...props}
       >
-        <IconShoppingBag />
+        <ShoppingBagIcon />
       </button>
     </Tooltip>
   )
