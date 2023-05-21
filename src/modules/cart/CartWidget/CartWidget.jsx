@@ -55,11 +55,12 @@ function CartWidget ({ ...props }) {
                   >
                     Limpiar carrito
                   </IconButton>
-                  <Link
-                    to='/cart'
-                    className='btn btn-primary btn-block'
-                  >Ver carrito
-                  </Link>
+                  <IconButton
+                    className='btn-primary btn-sm sm:btn-md btn-block'
+                    icon={<CartIcon />}
+                  >
+                    <Link to='/cart'>Ver carrito</Link>
+                  </IconButton>
                 </div>
               </>
               )}
