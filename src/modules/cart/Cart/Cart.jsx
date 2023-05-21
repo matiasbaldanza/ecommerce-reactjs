@@ -26,65 +26,79 @@ function Cart () {
   const quantity = cartQuantity()
   const isCartEmpty = quantity === 0
 
+  const CartActions = () => {
+    return (
+      <div className='flex flex-col justify-between w-full gap-2 sm:max-w-4xl sm:flex-row'>
+        <IconButton
+          className='mb-8 sm:mr-auto btn-primary btn-outline btn-sm sm:btn-md sm:mb-0'
+          icon={<BackIcon />}
+        >
+          <Link to='/'>Seguir comprando</Link>
+        </IconButton>
+
+        <IconButton
+          className='btn-error btn-outline btn-sm sm:btn-md'
+          icon={<CrossIcon />}
+          onClick={() => {
+            clearCart()
+            toast.success(<p>Carrito eliminado.</p>)
+          }}
+        >
+          Limpiar carrito
+        </IconButton>
+
+        <IconButton
+          className='btn-primary btn-sm sm:btn-md'
+          icon={<CartIcon />}
+        >
+          <Link to={cartSteps[NEXT_CART_STEP].path}>{cartSteps[NEXT_CART_STEP].label}</Link>
+        </IconButton>
+      </div>
+    )
+  }
+
+  const CartItemsTable = () => {
+    return (
+      <table className='table w-full max-w-4xl table-zebra'>
+        {/* head */}
+        <thead className='text-center'>
+          <tr>
+            <th />
+            <th>Producto</th>
+            <th>Cant.</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cart.map(item => <CartItem key={item.id} {...item} />)}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th />
+            <th />
+            <th className='text-right'><h3>Total: </h3></th>
+            <th className='text-right'>
+              <Price className='text-xl text-info ' price={cartTotalAmount()} currency='ARS' />
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    )
+  }
+
   return (
     <div className='flex flex-col items-center w-full gap-4 px-4'>
-      <CartBreadcrumbs steps={cartSteps} currentStep={CURRENT_CART_STEP} />
-      {isCartEmpty && showEmptyCartNotice(() => navigate(-1))}
       {
-        quantity > 0 &&
-          <>
-            <table className='table w-full max-w-4xl table-zebra'>
-              {/* head */}
-              <thead className='text-center'>
-                <tr>
-                  <th />
-                  <th>Producto</th>
-                  <th>Cant.</th>
-                  <th>Subtotal</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cart.map(item => <CartItem key={item.id} {...item} />)}
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th />
-                  <th />
-                  <th className='text-right'><h3>Total: </h3></th>
-                  <th className='text-right'><Price className='text-xl text-info ' price={cartTotalAmount()} currency='ARS' /></th>
-                </tr>
-              </tfoot>
-            </table>
-
-            {/* Acciones del carrito */}
-            <div className='flex flex-col justify-between w-full gap-2 sm:max-w-4xl sm:flex-row'>
-              <IconButton
-                className='mb-8 sm:mr-auto btn-primary btn-outline btn-sm sm:btn-md sm:mb-0'
-                icon={<BackIcon />}
-              >
-                <Link to='/'>Seguir comprando</Link>
-              </IconButton>
-
-              <IconButton
-                className='btn-error btn-outline btn-sm sm:btn-md'
-                icon={<CrossIcon />}
-                onClick={() => {
-                  clearCart()
-                  toast.success(<p>Carrito eliminado.</p>)
-                }}
-              >
-                Limpiar carrito
-              </IconButton>
-
-              <IconButton
-                className='btn-primary btn-sm sm:btn-md'
-                icon={<CartIcon />}
-              >
-                <Link to={cartSteps[NEXT_CART_STEP].path}>{cartSteps[NEXT_CART_STEP].label}</Link>
-              </IconButton>
-            </div>
-          </>
-    }
+        isCartEmpty
+          ? showEmptyCartNotice(() => navigate(-1))
+          : (
+            <>
+              <CartBreadcrumbs steps={cartSteps} currentStep={CURRENT_CART_STEP} />
+              <CartItemsTable />
+              <CartActions />
+            </>
+            )
+      }
 
     </div>
   )
