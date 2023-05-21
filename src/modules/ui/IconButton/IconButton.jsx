@@ -4,11 +4,13 @@ function IconButton ({ icon, onClick, ...props }) {
   return (
     <button
       {...props}
-      className={clsx('flex gap-4 btn', props.className)}
+      className={clsx('btn', props.className)}
       onClick={onClick}
     >
-      {icon}
-      {props.children}
+      <div className='flex items-center w-full gap-4'>
+        {icon}
+        <span className='flex-1'>{props.children}</span>
+      </div>
     </button>
   )
 }
