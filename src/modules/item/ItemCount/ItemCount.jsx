@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import useQuantity from '@/hooks/useQuantity'
 
 // Componentes
 import QuantitySelector from '@/modules/item/ItemCount/QuantitySelector'
@@ -6,15 +6,7 @@ import CartIcon from '@/modules/ui/Icons/CartIcon'
 import IconButton from '@/modules/ui/IconButton'
 
 function ItemCount ({ initial, stock, onAdd }) {
-  const [quantity, setQuantity] = useState(initial)
-
-  const decrement = (step) => {
-    if (quantity > 1) setQuantity(prevCount => prevCount - step)
-  }
-
-  const increment = (step) => {
-    if (quantity < stock) setQuantity(prevCount => prevCount + step)
-  }
+  const { quantity, increment, decrement } = useQuantity({ initial, min: 1, max: stock, step: 1 })
 
   return (
     <div className='relative w-40'>
