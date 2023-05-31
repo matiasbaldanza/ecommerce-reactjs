@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import useLocalStorage from '@/hooks/useLocalStorage'
 import toast from 'react-hot-toast'
 
 export const CartContext = createContext({
@@ -6,7 +7,7 @@ export const CartContext = createContext({
 })
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useLocalStorage('tuportatil-cart', [])
 
   const addItemToCart = (item, stock) => {
     const updateItemQuantity = (item, stock) => {
